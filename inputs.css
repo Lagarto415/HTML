@@ -1,0 +1,42 @@
+.style{
+    background-color: #d36135;
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+button, input {
+    background-color: darkblue;
+    color: white;
+    
+}
+
+.forms{
+    width: 400px;
+    text-align: center;
+    margin-top: 20px;
+    border:3px black solid;
+    margin: auto;  
+    border-radius: 40px;
+}
+
+.center {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-radius: 20px;
+  }
+
+.back {
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+.back:hover  {
+    color: #e3e3e3;
+}

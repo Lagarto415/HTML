@@ -1,0 +1,18 @@
+.style{
+    background-color: #d36135;
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.back {
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+.back:hover  {
+    color: #e3e3e3;
+}

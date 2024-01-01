@@ -5,31 +5,39 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    height: 100vh;
+    justify-content: center;
+    height: 100%;
+}
+
+.main > div {
+    display: inline-block;
+    margin-inline: 10%;
 }
 
 .style {
-    background-color: #d36135;
+    background-color: #913f92;
     color: white;
     text-decoration: none;
     font-weight: 100;
-    font-size: 20px;
 }
 
 h2 a{
+    font-family: Luminari, fantasy;
     text-decoration: none;
-    background-color: rgb(108, 108, 225);
+    background-color: #491f4a;
     color: white;
     font-weight: 100;
-    font-size: 30px;
     text-align: center;
 }
 
 
 .main {
-    flex: 8;
-    padding: 20px;
+    flex: 4;
+    padding: 2em;
+    justify-content: center;
+    text-align: center;
+    flex-basis: 80%;
+    flex-shrink: 1;
 }
 
 
@@ -41,7 +49,7 @@ h2 a{
 
 .menu a[href]:hover {
     color: white;
-    border: 3px solid #9c9cdb;
+    border: 3px solid #913f92;
     border-radius: 10px;
 }
 
@@ -53,49 +61,44 @@ a {
     cursor: default;
 }
 
-
 .image {
     border: 0;
     border-radius: 20px;
-    width: 300px;
+    width: 20%;
     height: auto;
     transition: 0.3s;
 }
 
-img:hover {
-    width: 310px;
-    cursor: default;
-}
-
 .header {
     flex: 1;
-    background-color: #d36135;
-    color: white;
+    flex-basis: 5%;
     align-self: flex-end;
     line-height: 2;
+    flex-shrink: 0;
 }
 
 .bottom {
-    flex-shrink: 0;
-    background-color: #964424;
+    flex: 1;
+    flex-basis: 5%;
+    background-color: #491f4a;
     color: white;
     text-align: center;
     line-height: 2;
-    margin-top: auto;
+    /* margin-top: auto; */
     width: 100%;
 }
 
 .bottom img{
-    width: 30px;
-    padding: 20px;
-    border: 3px solid transparent;
+    width: 2%;
+    padding: 1em;
+    border: 1px solid transparent;
     border-radius: 33%;
 }
 .bottom img:hover{
-    background-color: #d36135;
+    background-color: #913f92;
     cursor: pointer;
-    border: 3px solid white;
-    border-radius: 100%;
+    border: 1px solid white;
+    border-radius: 50%;
     transition: 1s;
 }
 
@@ -103,18 +106,16 @@ img:hover {
 body, html {
     height: 100%;
     margin: 0;
-    font-family: Lexend;
 }
 
 .menu{
+    position: relative;
+    border: 1px solid transparent;
+    background-color: #491f4a;
+    border-radius: 10%;
     text-transform: uppercase;
-    height: auto;
-    width: 500px;
-    background-color: rgb(108, 108, 225);
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 30px;
+    font-size: 100%;
+    width: 33%;
+    margin-left: 33%;
     text-align: center;
 }

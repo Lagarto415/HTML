@@ -17,8 +17,8 @@
   }
 
 .square{
-    height: 200px;
-    width: 200px;
+    height: 30%;
+    width: 40%;
     background-color: rgb(108, 108, 225);
     position: absolute;
     top: 50%;

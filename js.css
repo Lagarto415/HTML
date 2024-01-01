@@ -1,0 +1,53 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item{
+    text-align: center;
+}
+
+body{
+    font-family: Luminari, fantasy;
+    width: 100%;
+    background-color: #491f4a;
+    height: 100%;
+    margin: 0;
+}
+
+a[href], a{
+    text-decoration: none;
+    font-family: Luminari, fantasy;
+    text-transform: uppercase;
+    color: #912f92;
+}
+
+a[href]:hover{
+    transition: 0.5s;
+    color: white;
+}
+
+button{
+    padding: 10px;
+    border: 2px solid #912f92;
+    background-color: #491f4a;
+    color: #912f92;
+}
+
+button:hover{
+    transition: 0.3s;
+    background-color: #912f92;
+    color: #491f4a;
+}
+
+input{
+    background-color: #491f4a;
+    color: #912f92;
+    border: 1px solid #912f92;
+}
+
+label{
+    color: #912f92;
+    text-transform: uppercase;
+}

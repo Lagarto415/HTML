@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Lexend&display=swap');
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    height: 100%;
+}
+
+.container2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.style {
+    background-color: #491f4a;
+    color: #913f92;
+    text-decoration: none;
+    font-weight: 100;
+    font-family: Luminari, fantasy;
+    font-size: 5svh;
+    text-transform: uppercase;
+}
+
+h2 a{
+    text-decoration: none;
+    background-color: #491f4a;
+    color: #913f92;
+    font-weight: 100;
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    min-height: 80svh;
+    align-items: center;
+}
+
+.menu a[href]{
+    padding: 5px;
+}
+
+.menu a[href]:hover, a[href]:hover{
+    color: white;
+    transition: 0.5s;
+}
+
+a {
+    margin: 15px;
+    text-decoration: none;
+    color: #913f92;
+    text-decoration: none;
+    cursor: default;
+}

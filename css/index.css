@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lexend&display=swap');
 
-@font-face {
-    font-family: Luminari, fantasy;
-}
-
 .container {
     display: flex;
     flex-direction: column;
@@ -81,7 +77,7 @@ a {
 
 .menu{
     width: 50vw;
-    font-size: 3svh;
+    font-size: 5svh;
 }
 
 a:hover{

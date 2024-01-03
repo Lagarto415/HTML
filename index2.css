@@ -23,14 +23,16 @@
 }
 
 .style {
-    background-color: #913f92;
+    background-color: #491f4a;
     color: white;
     text-decoration: none;
     font-weight: 100;
+    font-family: Luminari, fantasy;
+    font-size: 3svh;
 }
 
 h2 a{
-    font-family: Luminari, fantasy;
+    
     text-decoration: none;
     background-color: #491f4a;
     color: white;
@@ -38,18 +40,17 @@ h2 a{
     text-align: center;
 }
 
-
 .main {
     display: flex;
-    padding: 2em;
+    flex-direction: row;
+    justify-content: center;
     text-align: center;
-    height: auto;
     min-height: 80svh;
-    align-content: center;
+    align-items: center;
 }
 
-
 .menu a[href]{
+    background-color: #913f92;
     transition: 0.5s;
     border: 3px solid transparent;
     padding: 5px;
@@ -57,7 +58,7 @@ h2 a{
 
 .menu a[href]:hover {
     color: white;
-    border: 3px solid #913f92;
+    border: 3px solid #491f4a;
     border-radius: 10px;
 }
 
@@ -72,11 +73,9 @@ a {
 .image {
     border: 0;
     border-radius: 20px;
-    width: 30%;
+    width: 20vw;
     height: auto;
     transition: 0.3s;
-    align-self: center;
-    text-align: center;
 }
 
 .header {
@@ -90,7 +89,7 @@ a {
 .bottom {
     flex: 1;
     flex-basis: 5%;
-    background-color: #491f4a;
+    background-color: #321633;
     color: white;
     text-align: center;
     /* margin-top: auto; */
@@ -102,7 +101,7 @@ a {
 }
 
 .bottom img{
-    margin-inline: 3svh;
+    margin-inline: svh;
     max-width: 25px;
     border: 1px solid transparent;
     border-radius: 0;
@@ -110,9 +109,9 @@ a {
 
 }
 .bottom img:hover{
-    background-color: #913f92;
+    background-color: #491f4a;
     cursor: pointer;
-    border: 1px solid white;
+    border: 1px solid #913f92;
     border-radius: 15px;
     transition: 1s;
 }
@@ -125,14 +124,11 @@ body, html {
 
 .menu{
     align-self: center;
-    position: relative;
     border: 1px solid transparent;
-    background-color: #491f4a;
+    background-color: #913f92;
     border-radius: 10%;
     text-transform: uppercase;
     font-size: 100%;
-    width: 33%;
-    margin-left: 33%;
+    width: 50vw;
     text-align: center;
-    height: 40svh;
 }

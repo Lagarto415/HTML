@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lexend&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Urbanist&display=swap');
 
 .container {
     display: flex;
@@ -17,14 +17,14 @@
 
 .style {
     background-color: #491f4a;
-    font-family: Luminari, fantasy;
+    /* font-family: Luminari, fantasy; */
+    font-family: 'Urbanist', sans-serif;
     font-size: 2svh;
 }
 
 h2 a{
     background-color: #491f4a;
     color: #913f92;
-    font-weight: 100;
     text-transform: uppercase;
 }
 

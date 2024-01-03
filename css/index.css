@@ -1,97 +1,57 @@
 @import url('https://fonts.googleapis.com/css?family=Lexend&display=swap');
 
-
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
     height: 100%;
 }
 
 .container2 {
-    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
 }
 
 .main > div {
-    display: inline-block;
     margin-inline: 10%;
 }
 
 .style {
     background-color: #491f4a;
-    color: white;
-    text-decoration: none;
-    font-weight: 100;
     font-family: Luminari, fantasy;
     font-size: 2svh;
 }
 
 h2 a{
-    text-decoration: none;
     background-color: #491f4a;
-    color: white;
+    color: #913f92;
     font-weight: 100;
-    text-align: center;
+    text-transform: uppercase;
 }
 
 .main {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     text-align: center;
     min-height: 80svh;
     align-items: center;
 }
 
-.menu a[href]{
-    background-color: #913f92;
-    transition: 0.5s;
-    border: 3px solid transparent;
-    padding: 5px;
-}
-
-.menu a[href]:hover {
-    color: white;
-    border: 3px solid #491f4a;
-    border-radius: 10px;
-}
-
 a {
-    margin: 15px;
     text-decoration: none;
-    color: white;
-    text-decoration: none;
-    cursor: default;
+    color: #913f92;
 }
 
 .image {
-    border: 0;
     border-radius: 20px;
     width: 20vw;
-    height: auto;
-    transition: 0.3s;
 }
 
 .header {
-    flex-basis: 5%;
     align-self: flex-end;
-    line-height: 2;
-    /* flex-shrink: 0; */
     height: 4svh;
 }
 
 .bottom {
-    flex: 1;
-    flex-basis: 5%;
     background-color: #321633;
-    color: white;
-    text-align: center;
-    /* margin-top: auto; */
     width: 100%;
     position: fixed;
     left: 0;
@@ -100,34 +60,27 @@ a {
 }
 
 .bottom img{
-    margin-inline: svh;
+    margin-inline: 1svh;
+    margin-block: 1svh;
     max-width: 25px;
     border: 1px solid transparent;
     border-radius: 0;
-    padding: 5px;
-
+    padding: 10px;
 }
+
 .bottom img:hover{
     background-color: #491f4a;
-    cursor: pointer;
     border: 1px solid #913f92;
     border-radius: 15px;
-    transition: 1s;
-}
-
-
-body, html {
-    height: 100%;
-    margin: 0;
+    transition: 0.5s;
 }
 
 .menu{
-    align-self: center;
-    border: 1px solid transparent;
-    background-color: #913f92;
-    border-radius: 10%;
-    text-transform: uppercase;
-    font-size: 100%;
     width: 50vw;
-    text-align: center;
+    font-size: 3svh;
+}
+
+a:hover{
+    transition: 0.5s;
+    color: white;
 }

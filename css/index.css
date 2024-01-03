@@ -91,7 +91,6 @@ menu > a[href] {
 
 /* SMARTPHONE */
 @media only screen and (max-width: 720px) {
-    @import url('https://fonts.googleapis.com/css?family=Lexend&display=swap');
     .header{
         align-self: center;
     }

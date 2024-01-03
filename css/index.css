@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Lexend&display=swap');
 
+@font-face {
+    font-family: Luminari, fantasy;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -83,4 +87,30 @@ a {
 a:hover{
     transition: 0.5s;
     color: white;
+}
+
+menu > a[href] {
+    border: 5px  solid black;
+}
+
+/* SMARTPHONE */
+@media only screen and (max-width: 720px) {
+    @import url('https://fonts.googleapis.com/css?family=Lexend&display=swap');
+    .header{
+        align-self: center;
+    }
+    .main{
+        padding: 0;
+        margin: 0;
+        flex-direction: column;
+    }
+    .menu{
+        font-size: 130%;
+    }
+    .container2{
+        margin-top: 25%;
+    }
+    .image{
+        width: 25svh;
+    }
 }

@@ -51,3 +51,14 @@ a[href]:hover{
 ::-webkit-scrollbar-thumb {
     background: #321633;
   }
+
+/* SMARTPHONE */
+@media only screen and (max-width: 720px) {
+    img{
+        width: 80vw;
+    }
+    
+    a[href], h1 {
+        font-size: 30px;
+    }
+}

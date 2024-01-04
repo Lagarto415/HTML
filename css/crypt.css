@@ -95,9 +95,6 @@ input {
     .container,.container2{
         width: 100vw;
     }
-    .container2{
-        margin-top: 5vh;
-    }
     body, html{
         margin: 0;
         padding: 0;
@@ -111,6 +108,12 @@ input {
         height: 10vh;
     }
     .buttons{
+        margin-top: 5vh;
+    }
+    .main{
         margin-top: 10vh;
+    }
+    .container2 a{
+        margin-top: 5vh;
     }
 }

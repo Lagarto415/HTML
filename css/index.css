@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Urbanist&display=swap');
 
-@font-face {
-    font-family: 'Urbanist', sans-serif;
-}
-
 .container {
     display: flex;
     flex-direction: column;

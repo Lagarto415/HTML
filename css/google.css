@@ -110,12 +110,20 @@ button:hover{
     color: white;
 } */
 
-.searchbar button {
-    height: 20px;
+
+.searchbar #search {
     position: relative;
-    top: 5px;
-    left: 10px;
-  }
+    left: 40px;
+    top: 2px;
+}
+
+.searchbar #microphone, #camera {
+    position: relative;
+    right: 80px;
+    padding: 5px;
+    top: 2px;
+    color: white;
+}
 
 .searchbar-input {
     border: 1px #5e636e solid;
@@ -139,11 +147,24 @@ input:hover {
 
 /* PHONE */
 @media only screen and (max-width: 720px) {
-        input{
+        .searchbar-input{
             width: 80vw;
             padding-inline-start: 1vw;
             padding-inline-end: 5vw;
         }
+
+        .searchbar #search {
+            position: relative;
+            left: 40px;
+            top: 2px;
+        }
+
+        .searchbar #microphone, #camera {
+            position: relative;
+            top: -37px;
+            left: 130px;
+        }
+
         .bottom a, .bottom{
             display: flex;
             flex-direction: column;

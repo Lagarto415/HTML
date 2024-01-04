@@ -59,7 +59,7 @@ a {
 }
 
 .bottom img{
-    margin-inline: 1svh;
+    margin-inline: 0.5svh;
     margin-block: 1svh;
     max-width: 25px;
     border: 1px solid transparent;

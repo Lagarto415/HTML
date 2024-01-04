@@ -35,7 +35,7 @@ body {
 .header a {
     color:#bdc1c5;
     text-decoration: none;
-    margin: 0 10px; /* Add margin to create space between links */
+    margin: 0 10px;
 }
 
 .main {
@@ -74,7 +74,7 @@ form{
     color:#d8d9dc;
     text-decoration: none;
     font-size: 13px;
-    margin: 0 10px; /* Add margin to create space between links */
+    margin: 0 10px;
     padding-inline: 1svh;
 }
 
@@ -99,7 +99,25 @@ button:hover{
     border: 1px #5e636e solid;
 }
 
-input {
+/* .searchbar {
+    border: 1px #5e636e solid;
+    background-color: #202124;
+    border-radius: 40px;
+    padding-inline-start: 50px;
+    padding-inline-end: 350px;
+    padding-block: 15px;
+    margin-top: 20px;
+    color: white;
+} */
+
+.searchbar button {
+    height: 20px;
+    position: relative;
+    top: 5px;
+    left: 10px;
+  }
+
+.searchbar-input {
     border: 1px #5e636e solid;
     background-color: #202124;
     border-radius: 40px;
@@ -115,8 +133,11 @@ input:hover {
     border-color: #303134;
 }
 
-/* PHONE */
+#search {
+    color: white;
+}
 
+/* PHONE */
 @media only screen and (max-width: 720px) {
         input{
             width: 80vw;

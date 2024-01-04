@@ -1,0 +1,22 @@
+{
+    "name": "vendor/personal",
+    "description": "Personal Site",
+    "keywords": [
+        "package",
+        "dependency",
+        "autoload"
+    ],
+    "homepage": "https://www.lagarto5.de",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yannick Kuehnel",
+            "email": "yannickkuehnel4105@gmail.com",
+            "homepage": "https://www.lagarto5.de"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "another-vendor/package": "1.*"
+    }
+}

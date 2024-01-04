@@ -115,6 +115,8 @@ input:hover {
     border-color: #303134;
 }
 
+/* PHONE */
+
 @media only screen and (max-width: 720px) {
         input{
             width: 80vw;

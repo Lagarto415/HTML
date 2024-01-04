@@ -93,6 +93,7 @@ menu > a[href] {
 }
 
 /* SMARTPHONE */
+
 @media only screen and (max-width: 720px) {
     .header{
         align-self: center;

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Urbanist&display=swap');
+body, html{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.style {
+    background-color: #491f4a;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 5svh;
+    text-transform: uppercase;
+}
+
+a[href]:hover{
+    transition: 0.5s;
+    color: white;
+}
+
+a, label {
+    text-decoration: none;
+    color: #913f92;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-self: flex-start;
+}
+
+.main{ 
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-block: 2vh;
+}
+
+input, label{
+    margin-inline: 10vh;
+    display: block;
+    text-align: center;
+}
+
+button{
+    padding: 1svh;
+    padding-inline: 10svh;
+    text-transform: uppercase;
+    color: #491f4a;
+    background-color: #913f92;
+    border: 0;
+}
+
+input {
+    background-color: #913f92;
+    color: #491f4a;
+    border: 0;
+}

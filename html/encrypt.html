@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypt</title>
+    <link rel="stylesheet" href="../css/crypt.css">
+</head>
+<body class="style">
+    <div class="container">
+        <div class="header">
+            <div class="back">
+                <a href="../index.html">Back</a>
+            </div>
+        </div>
+        <div class="container2">
+            <div class="main">
+                <div class="item">
+                    <label for="word">Word</label>
+                    <input type="text" name="word" id="word">
+                </div>
+                <div class="item">
+                    <label for="move">Move</label>
+                    <input type="number" name="move" id="move">
+                </div>
+            </div>  
+            <div class="item">
+                <button type="submit" onclick="calc()">Encode</button>
+            </div>
+            <div class="item">
+                <button type="submit" onclick="decode()">Decode</button>
+            </div>
+            <div class="item">
+                <a id="final"></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/crypt.js">
+    </script>
+    
+</body>
+</html>

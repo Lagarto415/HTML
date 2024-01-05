@@ -1,3 +1,4 @@
+@import 'variables.css';
 .container{
     display: flex;
     flex-direction: column;
@@ -11,7 +12,7 @@
 body{
         font-family: 'Urbanist', sans-serif;
     width: 100%;
-    background-color: #491f4a;
+    background-color: var(--bg);
     height: 100%;
     margin: 0;
 }
@@ -31,18 +32,18 @@ a[href]:hover{
 button{
     padding: 10px;
     border: 2px solid #912f92;
-    background-color: #491f4a;
+    background-color: var(--bg);
     color: #912f92;
 }
 
 button:hover{
     transition: 0.3s;
     background-color: #912f92;
-    color: #491f4a;
+    color: var(--bg);
 }
 
 input{
-    background-color: #491f4a;
+    background-color: var(--bg);
     color: #912f92;
     border: 1px solid #912f92;
 }

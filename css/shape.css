@@ -1,3 +1,4 @@
+@import 'variables.css';
 .center {
     display: block;
     margin: auto;
@@ -10,7 +11,7 @@
 .square{
     height: 200px;
     width: 200px;
-    background-color: rgb(108, 108, 225);
+    background-color: var(--rd);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -19,20 +20,24 @@
 }
 
 .style{
-    background-color: #d36135;
-    color: white;
+    background-color: var(--bg);
+    color: var(--font);
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 100;
     font-size: 20px;
 }
 
 .back {
+    font-family: 'Urbanist', sans-serif;
+    text-transform: uppercase;
     font-size: 30px;
     text-decoration: none;
-    color: white;
+    color: var(--font);
 }
 
 .back:hover  {
+    transition: 0.5s;
     color: #e3e3e3;
+    text-shadow: 2px 2px var(--rd);
+
 }

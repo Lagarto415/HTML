@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Urbanist&display=swap');
+@import 'variables.css';
 
 .container {
     display: flex;
@@ -18,14 +19,14 @@
 }
 
 .style {
-    background-color: #491f4a;
+    background-color: var(--bg);
     font-family: 'Urbanist', sans-serif;
     font-size: 2svh;
 }
 
 h2 a{
-    background-color: #491f4a;
-    color: #913f92;
+    background-color: var(--bg);
+    color: var(--font);
     text-transform: uppercase;
 }
 
@@ -38,7 +39,7 @@ h2 a{
 
 a {
     text-decoration: none;
-    color: #913f92;
+    color: var(--font);
 }
 
 .image {
@@ -51,7 +52,7 @@ a {
     flex-direction: row;
     height: 4svh;
     width: 100%;
-    font-size: 5svh;
+    font-size: var(--headfont);
     padding: 1svh;
 }
 .name{
@@ -59,7 +60,7 @@ a {
 }
 
 .bottom {
-    background-color: #321633;
+    background-color: var(--rd);
     width: 100%;
     position: fixed;
     left: 0;
@@ -77,21 +78,21 @@ a {
 }
 
 .bottom img:hover{
-    background-color: #491f4a;
-    border: 1px solid #913f92;
+    background-color: var(--rd);
+    border: 1px solid var(--font);
     border-radius: 15px;
     transition: 0.5s;
 }
 
 .menu{
     width: 50vw;
-    font-size: 5svh;
+    font-size: var(--menufont);
 }
 
 a:hover{
     transition: 0.5s;
     color: white;
-    text-shadow: 5px 5px #321633;
+    text-shadow: 5px 5px var(--rd);
 }
 
 menu > a[href] {

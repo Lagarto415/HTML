@@ -8,7 +8,7 @@ body, html{
 .style {
     background-color: #491f4a;
     font-family: 'Urbanist', sans-serif;
-    font-size: 5svh;
+    font-size: 8svh;
     text-transform: uppercase;
 }
 
@@ -33,6 +33,7 @@ a, label {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 .header{
     display: flex;
@@ -69,12 +70,16 @@ button{
     color: #491f4a;
     background-color: #913f92;
     border: 0;
+    font-size: 4svh;
 }
 
 input {
     background-color: #913f92;
     color: #491f4a;
     border: 0;
+    text-transform: uppercase;
+    padding: 2svh;
+    font-size: 4svh;
 }
 
 /* SMARTPHONE */

@@ -4,6 +4,7 @@ const finalobj = document.getElementById('final');
 
 function calc (){
     raw = wordobj.value;
+    raw = raw.toUpperCase();
     const mov = parseInt(moveobj.value);
     var x = 0;
     var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";

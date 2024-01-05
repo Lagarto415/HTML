@@ -16,9 +16,11 @@ body {
 }
 
 .bild {
-    height: 100%;
-    margin-top: 150px;
+    display: flex;
+    margin-top: 15vh;
     margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
 }
 
 form{
@@ -61,7 +63,38 @@ button {
     font-size: 14px;
 }
 
+.adv {
+    position: fixed;
+}
+
 a[href]:hover{
     text-decoration: underline;
     
+}
+
+/* PHONE */
+@media only screen and (max-width: 720px) {
+    .bild{
+        width: 40vw;
+    }
+    input{
+        padding-inline-end: 50vw;
+        border: 1px solid grey;
+    }
+    .adv{
+        display: none;
+    }
+    .ad{
+        margin-top: 10vh;
+    }
+    .back{
+        margin-block: 2vh;
+    }
+    .footer{
+        margin-top: 10vh;
+    }
+    body, html{
+        height: 100%;
+        width: 100%;
+    }
 }

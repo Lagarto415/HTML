@@ -35,6 +35,7 @@ function check() {
     let check = Ausg[x].toLowerCase().replace(/[\s-]/g, '');
 
     if (inp == check) {
+        dk();
         tfobj.innerHTML = 'TRUE';
         itemAnchor.style.backgroundColor = 'var(--rd)';
         itemAnchor.style.transition = '0.5s';

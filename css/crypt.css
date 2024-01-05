@@ -80,6 +80,10 @@ input {
     font-size: 4svh;
 }
 
+input:focus-visible{
+    outline: none;
+}
+
 .item a{
     display: inline-block;
     text-align: center;

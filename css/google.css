@@ -141,6 +141,10 @@ input:hover {
     border-color: #303134;
 }
 
+input:focus-visible{
+    outline: none;
+}
+
 #search {
     color: white;
 }

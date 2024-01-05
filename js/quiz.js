@@ -14,6 +14,7 @@ const Ausg = ['Double Data Rate', 'Random Access Memory','Master Boot Record',
 const abkobj = document.getElementById('abk');
 const ausgobj = document.getElementById('ausg');
 const tfobj = document.getElementById('tf');
+const itemAnchor = document.querySelector('.item a');
 let x = 0
 let a = 0
 
@@ -29,6 +30,7 @@ function reroll() {
     }
     x = a;
     abkobj.value = Abk[x]
+    itemAnchor.style.backgroundColor = 'var(--bg)';
 }
 
 function check() {
@@ -37,10 +39,13 @@ function check() {
 
     if (inp == check){
         tfobj.innerHTML = 'TRUE'
+        itemAnchor.style.backgroundColor = 'var(--rd)';
+        itemAnchor.style.transition = '0.5s';
     }
     else {
         tfobj.innerHTML = 'FALSE'
     }
+
 }
 
 function dk (){

@@ -82,6 +82,19 @@ input {
     font-size: 4svh;
 }
 
+.item a{
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    width: 75svh;
+    height: 15svh;
+    line-height: 13svh;
+    border: 1svh solid #913f92;
+}
+
+a, input, button{
+    border-radius: 5px;
+}
 /* SMARTPHONE */
 
 @media only screen and (max-width: 720px) {
@@ -108,7 +121,7 @@ input {
         margin-left: 3vw;
     }
     .item button{
-        margin-block: 5vh;
+        margin-block: 2vh;
         width: 80vw;
         height: 10vh;
     }
@@ -120,5 +133,8 @@ input {
     }
     .container2 a{
         margin-top: 5vh;
+    }
+    .item a{
+        width: 80vw;
     }
 }

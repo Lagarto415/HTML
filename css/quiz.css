@@ -1,0 +1,22 @@
+@import 'variables.css';
+
+.style{
+    background-color: var(--bg);
+    color: var(--font);
+    font-size: var(--menufont);
+}
+
+
+.back {
+    font-family: 'Urbanist', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--font);
+}
+
+.back:hover  {
+    transition: 0.5s;
+    color: #e3e3e3;
+    text-shadow: 2px 2px var(--rd);
+
+}

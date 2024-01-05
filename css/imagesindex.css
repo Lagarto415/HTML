@@ -39,7 +39,7 @@ html, body{
 }
 
 a, h1 {
-    font-size: 5svh;
+    font-size: var(--menufont);
     text-decoration: none;
     color: var(--font);
     transition: 0.3s;

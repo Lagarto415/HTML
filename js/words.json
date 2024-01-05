@@ -1,0 +1,22 @@
+{
+    "words":[    
+        {"Abk": "DDR","Ausg": "Double Data Rate"},
+        {"Abk": "RAM","Ausg": "Random Access Memory"},
+        {"Abk": "MBR","Ausg": "Master Boot Record"},
+        {"Abk": "PXE","Ausg": "Preboot Execution Environment"},
+        {"Abk": "URL","Ausg": "Uniform Resource Locator"},
+        {"Abk": "KVM","Ausg": "Keyboard Video Mouse"},
+        {"Abk": "DNS","Ausg": "Domain Name System"},
+        {"Abk": "SSID","Ausg": "Service Set Identifier"},
+        {"Abk": "PoE","Ausg": "Power over Ethernet"},
+        {"Abk": "USV","Ausg": "Unterbrechungsfreie Stromversorgung"},
+        {"Abk": "TAS","Ausg": "Tool assisted speedrun"},
+        {"Abk": "APIPA","Ausg": "Automatic Private IP Adressing"},
+        {"Abk": "DBMS","Ausg": "Datenbank Management System"},
+        {"Abk": "GPU","Ausg": "Graphics Processing Unit"},
+        {"Abk": "CPU","Ausg": "Central Processing Unit"},
+        {"Abk": "PSU","Ausg": "Power Supply Unit"},
+        {"Abk": "SSD","Ausg": "Solid State Drive"},
+        {"Abk": "HDD","Ausg": "Hard Disk Drive"}
+    ]
+}

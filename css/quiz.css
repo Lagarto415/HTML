@@ -23,6 +23,10 @@ a, label {
     color: var(--font);
 }
 
+a{
+    text-transform: uppercase;
+}
+
 .container{
     display: flex;
     flex-direction: column;
@@ -37,14 +41,15 @@ a, label {
     
 }
 .header{
+    top: 0;
     display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-self: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
 }
 
 .main{ 
-    margin-top: 20vh;
+    margin-top: 5vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -80,6 +85,7 @@ input {
     border: 0;
     padding: 2svh;
     font-size: 4svh;
+    width: 35vw;
 }
 
 input:focus-visible{

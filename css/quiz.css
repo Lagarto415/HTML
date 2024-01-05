@@ -118,6 +118,9 @@ label, .back{
         justify-content: center;
         margin-block: 1vh;
     }
+    .headline{
+        display: none;
+    }
     input{
         height: 5vh;
         width: 80vw;

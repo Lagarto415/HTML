@@ -9,7 +9,7 @@ const Abk = ['DDR','RAM','MBR','PXE','URL','KVM','DNS','SSID','PoE','USV','TAS',
 const Ausg = ['Double Data Rate', 'Random Access Memory','Master Boot Record',
 'Preboot Execution Environment','Uniform Resource Locator','Keyborad Video Mouse', 
 'Domain Name System','Service Set Identifier','Power over Ethernet',
-'Unterbrechungsfreie Stromversorgung','Tool assisted speedrun','Automatic Private IP Adressing',
+'Unterbrechungsfreie Stromversorgung','Tool-assisted-speedrun','Automatic Private IP Adressing',
 'Datenbank Management System'];
 const abkobj = document.getElementById('abk');
 const ausgobj = document.getElementById('ausg');
@@ -32,12 +32,13 @@ function reroll() {
 }
 
 function check() {
-    if (ausgobj.value.toLowerCase() == Ausg[x].toLowerCase()){
-        console.log('TRUE')
+    let inp = ausgobj.value.toLowerCase().replace(/[\s-]/g,'');
+    let check = Ausg[x].toLowerCase().replace(/[\s-]/g,'');
+
+    if (inp == check){
         tfobj.innerHTML = 'TRUE'
     }
     else {
-        console.log('FALSE')
         tfobj.innerHTML = 'FALSE'
     }
 }

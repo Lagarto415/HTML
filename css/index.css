@@ -45,8 +45,15 @@ a {
 }
 
 .header {
-    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
     height: 4svh;
+    width: 100%;
+    font-size: 5svh;
+    padding: 1svh;
+}
+.name{
+    margin-left: auto;
 }
 
 .bottom {

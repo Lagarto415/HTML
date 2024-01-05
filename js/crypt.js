@@ -2,22 +2,30 @@ const moveobj = document.getElementById('move');
 const wordobj = document.getElementById('word');
 const finalobj = document.getElementById('final');
 
-function calc (){
+function encode (){
     raw = wordobj.value;
-    raw = raw.toUpperCase();
     const mov = parseInt(moveobj.value);
     var x = 0;
     var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var alphabets = "abcdefghijklmnopqrstuvwxyz";
     var fullAlphabet = alphabet + alphabet + alphabet;
+    var fullAlphabets = alphabets + alphabets + alphabets;
     let fin = "";
     var temp = '';
 
-    while (x<raw.length){
-        temp = raw.charCodeAt(x) - 65
-        console.log(temp+mov)
-        fin += fullAlphabet.charAt(temp+mov);
-        x++;
+    while (x < raw.length) {
+        if (65 <= raw.charCodeAt(x) && raw.charCodeAt(x) <= 90) {
+            temp = raw.charCodeAt(x) - 65;
+            fin += fullAlphabet.charAt(temp + mov);
+            x++;
+        }
+        if (97 <= raw.charCodeAt(x) && raw.charCodeAt(x) <= 122) {
+            temp = raw.charCodeAt(x) - 97;
+            fin += fullAlphabets.charAt(temp + mov);
+            x++;
+        }
     }
+    
     finalobj.innerHTML = fin;
 }
 
@@ -26,15 +34,23 @@ function decode(){
     const mov = parseInt(moveobj.value);
     var x = 0;
     var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var alphabets = "abcdefghijklmnopqrstuvwxyz";
     var fullAlphabet = alphabet + alphabet + alphabet;
+    var fullAlphabets = alphabets + alphabets + alphabets;
     let fin = "";
     var temp = '';
 
-    while (x<raw.length){
-        temp = raw.charCodeAt(x) - 65
-        console.log(temp+mov)
-        fin += fullAlphabet.charAt(temp-mov+26);
-        x++;
+    while (x < raw.length) {
+        if (65 <= raw.charCodeAt(x) && raw.charCodeAt(x) <= 90) {
+            temp = raw.charCodeAt(x) - 65;
+            fin += fullAlphabet.charAt(temp - mov + 26);
+            x++;
+        }
+        if (97 <= raw.charCodeAt(x) && raw.charCodeAt(x) <= 122) {
+            temp = raw.charCodeAt(x) - 97;
+            fin += fullAlphabets.charAt(temp - mov + 26);
+            x++;
+        }
     }
     finalobj.innerHTML = fin;
 }

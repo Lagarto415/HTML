@@ -62,3 +62,29 @@ function decode(){
     }
     finalobj.innerHTML = fin;
 }
+
+function copyToClipboard() {
+    if (finalobj) {
+        navigator.clipboard.writeText(finalobj.innerHTML)
+          .then(() => {
+            showNotification('COPIED');
+          })
+          .catch(err => {
+            console.error('Unable to copy text to clipboard', err);
+          });
+      } else {
+        console.error('Element with id "finalobj" not found.');
+      }
+  }
+
+function showNotification(message) {
+    var notification = document.createElement('div');
+    notification.className = 'notification';
+    notification.textContent = message;
+  
+    document.body.appendChild(notification);
+  
+    setTimeout(function() {
+      document.body.removeChild(notification);
+    }, 1000);
+  }

@@ -24,6 +24,10 @@ function encode (){
             fin += fullAlphabets.charAt(temp + mov);
             x++;
         }
+        if(raw.charCodeAt(x) == 32){
+            fin += " ";
+            x++;
+        }
     }
     
     finalobj.innerHTML = fin;
@@ -49,6 +53,10 @@ function decode(){
         if (97 <= raw.charCodeAt(x) && raw.charCodeAt(x) <= 122) {
             temp = raw.charCodeAt(x) - 97;
             fin += fullAlphabets.charAt(temp - mov + 26);
+            x++;
+        }
+        if(raw.charCodeAt(x) == 32){
+            fin += " ";
             x++;
         }
     }

@@ -7,7 +7,6 @@
     align-items: center;
     height: 100%;
     width: 100%;
-    overflow: hidden;
 }
 
 body {
@@ -16,6 +15,7 @@ body {
     background-position-y: 40%;
     background-repeat: no-repeat;
     background-size: 130vh;
+    overflow: hidden;
   }
   
 .container2 {
@@ -41,7 +41,7 @@ h2 a{
 .main {
     display: flex;
     text-align: center;
-    min-height: 80svh;
+    height: 100vh;
     align-items: center;
 }
 
@@ -103,6 +103,9 @@ a {
 }
 
 .menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 50vw;
     font-size: var(--menufont);
 }
@@ -129,7 +132,7 @@ menu > a[href] {
         flex-direction: column;
     }
     .menu{
-        font-size: 130%;
+        font-size: var(--phonefont);
     }
     .container2{
         margin-top: 25%;

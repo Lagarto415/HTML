@@ -10,13 +10,14 @@
     overflow: hidden;
 }
 
-body{
+body {
+    background: radial-gradient(circle, var(--indexrd), transparent), url('https://cdn.midjourney.com/c90814e5-6b6e-4688-a4c6-d1eae08de54b/0_0.webp');
     background-position: center;
     background-position-y: 40%;
-    background-image: url('https://media.discordapp.net/attachments/1180541566335598642/1193505029915693157/lagarto415_simple_modern_website_logo_showing_a_pruple_L_c90814e5-6b6e-4688-a4c6-d1eae08de54b.png?ex=65acf52d&is=659a802d&hm=a4a62d7ca61940dc6b42503a68f497077ae359aa2278777a1f07a305428c0261&=&format=webp&quality=lossless&width=1357&height=1357');
     background-repeat: no-repeat;
     background-size: 130vh;
-}
+  }
+  
 .container2 {
     display: flex;
 }
@@ -135,5 +136,9 @@ menu > a[href] {
     }
     .image{
         width: 25svh;
+    }
+    body{
+        background-size: 75vh;
+        background-position-y: 20vh;
     }
 }

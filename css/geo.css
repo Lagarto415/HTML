@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Geo&display=swap');
+
+:root{
+    --bg: #e3caa5;
+    --box: #ceab93;
+    --font: #FFFBE9;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    min-height: 100vh;
+    width: 100vw;
+    font-family: 'Geo', sans-serif;
+    color: var(--font);
+    background-color: var(--bg);
+    font-size: 40px;
+}
+
+.style{
+    justify-content: center;
+    display: flex;
+    flex-direction: column; /* Assuming you want to center vertically */
+    align-items: center;
+    gap: 5vh
+}
+
+.container{
+    padding: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    background-color: var(--box);
+    min-width: 20vw;
+    min-height: 20vh;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap;
+}
+
+input{
+    text-align: center;
+    outline: none;
+    inline-size: 10vw;
+    block-size: 2vh;
+    box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.back{
+    text-decoration: none;
+    color: var(--font);
+    align-self: flex-start;
+    padding-inline: 10px;
+    padding-top: 5px;
+}
+
+button{
+    font-family: 'Geo', sans-serif;
+    color: rgba(0, 0, 0, 0.4);
+    background-color: var(--bg);
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}

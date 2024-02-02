@@ -72,7 +72,6 @@ body, html {
     align-items: center;
     height: 5vh;
     border-radius: 10px;
-    line-height: 1;
 }
 
 .footer img {
@@ -80,4 +79,26 @@ body, html {
     text-align: center;
     justify-content: center;
     vertical-align: middle;
+}
+
+/* Media Query for screens with a max-width of 600px */
+@media screen and (max-width: 600px) {
+    .itemrow {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .items {
+        width: 80vw;
+        margin: 20px 0;
+    }
+
+    html, body{
+        overflow: auto;
+    }
+
+    .footer{
+        position: fixed;
+    }
 }

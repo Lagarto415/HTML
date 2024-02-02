@@ -72,12 +72,12 @@ body, html {
     align-items: center;
     height: 5vh;
     border-radius: 10px;
-    line-height: 1; /* Adjust the line-height */
+    line-height: 1;
 }
 
 .footer img {
     max-width: 25px;
     text-align: center;
     justify-content: center;
-    vertical-align: middle; /* Align images vertically */
+    vertical-align: middle;
 }

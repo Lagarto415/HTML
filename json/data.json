@@ -18,7 +18,6 @@
         {"Abk": "PSU","Ausg": "Power Supply Unit"},
         {"Abk": "SSD","Ausg": "Solid State Drive"},
         {"Abk": "HDD","Ausg": "Hard Disk Drive"},
-        {"Abk": "BWB", "Ausg":"Berliner Wasserbetriebe"},
-        {"pw1": "Apollon"}
+        {"Abk": "BWB", "Ausg":"Berliner Wasserbetriebe"}
     ]
 }

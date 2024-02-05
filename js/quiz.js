@@ -14,6 +14,17 @@ const tfobj = document.getElementById('tf');
 const itemAnchor = document.querySelector('.item a');
 let x = 0;
 let a = 0;
+// var password;
+// var pass1 = "Apollon";
+    
+// // Now that pass1 is set, prompt for password and check
+// password = prompt('Please enter your password to view this page!', '');
+// if (pass1.includes(password)) {
+
+// } else {
+//     window.location = '../index.html';
+// }
+
 
 function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;

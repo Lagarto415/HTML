@@ -29,16 +29,18 @@
     margin-block-start: 2vh;
     box-shadow: 0px 10px 10px 5px rgba(0, 0, 0, 0.1);
     border: 1px solid transparent;
+    cursor: default;
 }
 
 .header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin-block-start: 15px;
     width: 98%;
     background-color: var(--a);
     text-align: center;
-    align-items: center;
-    padding-block: 1vh;
-    height: 5vh;
+    height: 7vh;
     border-radius: 10px;
 }
 
@@ -111,6 +113,20 @@
 .footer img:hover{
     filter: brightness(100%);
 }
+
+::-webkit-scrollbar{
+    width: .8vw;
+}
+
+::-webkit-scrollbar-track{
+    background: var(--box);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--a);
+  }
+
 
 /* Media Query for screens with a max-width of 600px */
 @media screen and (max-width: 800px) {

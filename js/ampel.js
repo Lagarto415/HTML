@@ -6,6 +6,8 @@ var redLightOn = false
 var yellowLightOn = false
 var greenLightOn = false
 
+alert("Only Press the lights when Arduino is conected! \n Otherwise the Site will crash, while trying to connect to the Arduino")
+
 function changecolor(color){
     if(color == 'red'){
         console.log(color);

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Geo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
     --bg: #e3caa5;
@@ -14,7 +15,7 @@ body {
     padding: 0; /* Remove default padding */
     min-height: 100vh;
     width: 100vw;
-    font-family: 'Geo', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     color: var(--font);
     background-color: var(--bg);
     font-size: 40px;

@@ -49,7 +49,7 @@ body, html {
 }
 
 .itemrow{
-    margin: 100px;
+    margin: 10vh;
     display: flex;
     justify-content: space-evenly;
 }
@@ -91,7 +91,7 @@ body, html {
 .footer img {
     padding-block-end: 5px;
     filter: brightness(80%);
-    max-width: 25px;
+    max-height: 3svh;
     text-align: center;
     justify-content: center;
     vertical-align: middle;

@@ -11,33 +11,33 @@ let guessed = []
 let ctemp = all_countries
 
 function check() {
-    if(current_pts < 46){
+    if (current_pts < total) {
         for (let i = all_countries.length - 1; i >= 0; i--) {
             if (input.value.replace(/\s+/g, "").toLowerCase() === ctemp[i].replace(/\s+/g, "").toLowerCase()) {
                 input.value = "";
-                console.log(countryid[i])
-                console.log(ctemp[i])
-                try{
+                console.log(countryid[i]);
+                console.log(ctemp[i]);
+                try {
                     document.getElementById(countryid[i]).classList.toggle("active");
-                }
-                catch{
-                    guessed.push(countryid[i])
+                } catch {
+                    guessed.push(countryid[i]);
                     ctemp.splice(i, 1);
                     countryid.splice(i, 1);
                     current_pts++;
-                    points.innerHTML = (current_pts + " / " + total);
+                    points.innerHTML = `${current_pts} / ${total}`;
                     break; // Exit the loop if a match is found 
                 }
-                guessed.push(countryid[i])
+                guessed.push(countryid[i]);
                 ctemp.splice(i, 1);
                 countryid.splice(i, 1);
                 current_pts++;
-                points.innerHTML = (current_pts + " / " + total);
+                points.innerHTML = `${current_pts} / ${total}`;
                 break; // Exit the loop if a match is found
             }
         }
     }
 }
+
 
 function reset() {
     ctemp = ["Albania","Andorra","Austria","Belarus","Belgium","Bosnia and Herzegovina","Bulgaria","Croatia","Cyprus","Czech Republic","Denmark","Estonia","Finland","France","Germany","Greece","Hungary","Iceland","Ireland","Italy","Kosovo","Latvia","Liechtenstein","Lithuania","Luxembourg","Malta","Moldova","Monaco","Montenegro","Netherlands","North Macedonia","Norway","Poland","Portugal","Romania","Russia","San Marino","Serbia","Slovakia","Slovenia","Spain","Sweden","Switzerland","Turkey","Ukraine","United Kingdom","Vatican City"];

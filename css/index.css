@@ -113,6 +113,7 @@ body, html {
     .items {
         width: 80vw;
         margin: 20px 0;
+        padding-block: 6vh;
     }
 
     html, body{

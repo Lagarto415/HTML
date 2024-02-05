@@ -88,6 +88,7 @@ function reroll(){
     displayedflag.src = ("img/flags/"+ countrySVGs[newflag]);
     console.log(countrySVGs[newflag])
     console.log(countryNames[newflag])
+    input.value=""
 }
 
 function reset(){

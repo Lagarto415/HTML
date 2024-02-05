@@ -54,6 +54,7 @@ let points = document.getElementById("points");
 let current_pts = 0
 let newflag = 0
 let timer_started = false
+reroll()
 
 function check() {
     if (current_pts < total) {

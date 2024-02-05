@@ -25,7 +25,7 @@ body {
     display: flex;
     flex-direction: column; /* Assuming you want to center vertically */
     align-items: center;
-    gap: 5vh
+    gap: 3vh;
 }
 
 .container{
@@ -42,6 +42,22 @@ body {
     border-radius: 15px;
     box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.2);
     flex-wrap: wrap;
+}
+
+.timer{
+    padding: 1vh;
+    text-align: center;
+    background-color: var(--box);
+    min-width: 10vw;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap;
+    transition: 0.2s ease-in-out;
+}
+
+#timer.active{
+    background-color: rgb(0, 155, 0);
 }
 
 input{
@@ -70,47 +86,9 @@ button{
     border-radius: 5px;
 }
 
-#AL.active,
-#AD.active,
-#AT.active,
-#BY.active,
-#BE.active,
-#BA.active,
-#BG.active,
-#HR.active,
-#CY.active,
-#CZ.active,
-#DK.active,
-#EE.active,
-#FI.active,
-#FR.active,
-#DE.active,
-#GR.active,
-#HU.active,
-#IS.active,
-#IE.active,
-#IT.active,
-#XK.active,
-#LV.active,
-#LI.active,
-#LT.active,
-#LU.active,
-#MD.active,
-#ME.active,
-#NL.active,
-#MK.active,
-#NO.active,
-#PL.active,
-#PT.active,
-#RO.active,
-#RS.active,
-#SK.active,
-#SI.active,
-#ES.active,
-#SE.active,
-#CH.active,
-#TR.active,
-#UA.active,
-#GB.active {
-    fill: green;
+#AL.active,#AD.active,#AT.active,#BY.active,#BE.active,#BA.active,#BG.active,#HR.active,#CY.active,#CZ.active,#DK.active,#EE.active,#FI.active,#FR.active,
+#DE.active,#GR.active,#HU.active,#IS.active,#IE.active,#IT.active,#XK.active,#LV.active,#LI.active,#LT.active,#LU.active,#MD.active,#ME.active,#NL.active,
+#MK.active,#NO.active,#PL.active,#PT.active,#RO.active,#RS.active,#SK.active,#SI.active,#ES.active,#SE.active,#CH.active,#TR.active,#UA.active,#GB.active {
+    fill: rgb(0, 155, 0);
+    transition: 0.1s;
 }

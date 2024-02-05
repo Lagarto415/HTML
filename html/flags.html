@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lagarto5 | Europe-Quiz</title>
+    <link rel="stylesheet" href="../css/geo.css">
+    <link rel="icon" href="img/n.png">
+</head>
+<body>
+    <div class="style">
+        <div class="container">
+            <a href="geoindex.html" class="back">Back</a>
+            <a>Flags of the World</a>
+            <a id="points" class="points">0 / 201</a>
+            <input type="text" id="input" oninput="check()" autocomplete="off">
+            <button onclick="reroll()">Skip</button>
+            <button onclick="reset()">Reset</button>
+        </div>
+        <div id="timer" class="timer">Guess to start</div>
+        <div class="flag">
+            <img id="flag" src="img/flags/dk.svg" alt="FLAG">
+        </div>
+
+    </div>    
+    <script src="../js/flags.js"></script>
+
+</body>
+</html>

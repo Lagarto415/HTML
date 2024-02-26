@@ -41,7 +41,6 @@ body {
 .main {
     display: flex;
     flex-direction: column;
-    padding: 100px;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -99,41 +98,35 @@ button:hover{
     border: 1px #5e636e solid;
 }
 
-/* .searchbar {
+.search{
+
+}
+
+svg{
+    width: 30px;
+}
+
+.searchbar{
+    display: flex;
+    gap: 1rem;
     border: 1px #5e636e solid;
     background-color: #202124;
     border-radius: 40px;
-    padding-inline-start: 50px;
-    padding-inline-end: 350px;
+    padding-inline-start: 30px;
+    padding-inline-end: 30px;
     padding-block: 15px;
     margin-top: 20px;
     color: white;
-} */
-
-
-.searchbar #search {
-    position: relative;
-    left: 40px;
-    top: 2px;
+    width: 100%;
 }
 
-.searchbar #microphone, #camera {
-    position: relative;
-    right: 80px;
-    padding: 5px;
-    top: 2px;
-    color: white;
+.searchbar-input{
+    width: 100%;
 }
 
-.searchbar-input {
-    border: 1px #5e636e solid;
-    background-color: #202124;
-    border-radius: 40px;
-    padding-inline-start: 50px;
-    padding-inline-end: 350px;
-    padding-block: 15px;
-    margin-top: 20px;
-    color: white;
+input {
+    all: unset;
+    width: 100%;
 }
 
 input:hover {
@@ -143,10 +136,6 @@ input:hover {
 
 input:focus-visible{
     outline: none;
-}
-
-#search {
-    color: white;
 }
 
 /* PHONE */

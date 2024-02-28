@@ -89,7 +89,8 @@ input{
 }
 
 .flag img{
-    width: 30vw;
+    min-height: 10rem;
+    max-height: 20rem;
 }
 
 button{

@@ -1,0 +1,70 @@
+@import 'variables.css';
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100%;
+}
+
+.container2{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-inline: auto;
+}
+
+.item2{
+    align-self: center;
+    padding-inline: 30%;
+}
+
+.item a{
+    font-size: 10svh;
+}
+
+html, body{
+    font-family: 'Urbanist', sans-serif;
+    background-color: var(--bg);
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+a, h1 {
+    font-size: var(--menufont);
+    text-decoration: none;
+    color: var(--font);
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+a[href]:hover{
+    color: white;
+    text-shadow: 5px 5px var(--rd);
+}
+
+.back{
+    padding: 1svh;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+/* SMARTPHONE */
+
+@media only screen and (max-width: 720px) {
+    a, .item a{
+        font-size: 5.5svh;
+    }
+    .container2{
+        margin-top: 50vw;
+    }
+}

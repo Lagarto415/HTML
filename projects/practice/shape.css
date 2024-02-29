@@ -1,0 +1,43 @@
+@import 'variables.css';
+.center {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-radius: 20px;
+  }
+
+.square{
+    height: 200px;
+    width: 200px;
+    background-color: var(--rd);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+}
+
+.style{
+    background-color: var(--bg);
+    color: var(--font);
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.back {
+    font-family: 'Urbanist', sans-serif;
+    text-transform: uppercase;
+    font-size: 30px;
+    text-decoration: none;
+    color: var(--font);
+}
+
+.back:hover  {
+    transition: 0.5s;
+    color: #e3e3e3;
+    text-shadow: 2px 2px var(--rd);
+
+}

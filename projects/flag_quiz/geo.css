@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Geo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --bg: #e3caa5;
+    --box: #ceab93;
+    --font: #FFFBE9;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    min-height: 100vh;
+    width: 100vw;
+    font-family: 'Geo', sans-serif;
+    color: var(--font);
+    background-color: var(--bg);
+    font-size: 40px;
+}
+
+.style{
+    justify-content: center;
+    display: flex;
+    flex-direction: column; /* Assuming you want to center vertically */
+    align-items: center;
+    gap: 3vh;
+}
+
+.container{
+    padding: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    background-color: var(--box);
+    min-width: 20vw;
+    min-height: 20vh;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap;
+}
+
+.timer{
+    font-family: 'Work Sans', sans-serif;
+    padding: 1vh;
+    text-align: center;
+    background-color: var(--box);
+    min-width: 10vw;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap;
+    transition: 0.2s ease-in-out;
+}
+
+#timer.active{
+    background-color: rgb(0, 155, 0);
+}
+
+input{
+    text-align: center;
+    outline: none;
+    inline-size: 10vw;
+    block-size: 2vh;
+    box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.back{
+    text-decoration: none;
+    color: var(--font);
+    align-self: flex-start;
+    padding-inline: 10px;
+    padding-top: 5px;
+}
+
+.flag{
+    padding: 1vh;
+    background-color: var(--box);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.2);
+}
+
+.flag img{
+    min-height: 10rem;
+    max-height: 20rem;
+}
+
+button{
+    font-family: 'Geo', sans-serif;
+    color: rgba(0, 0, 0, 0.4);
+    background-color: var(--bg);
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+
+.points{
+    font-family: 'Work Sans', sans-serif;
+}
+
+#AL.active,#AD.active,#AT.active,#BY.active,#BE.active,#BA.active,#BG.active,#HR.active,#CY.active,#CZ.active,#DK.active,#EE.active,#FI.active,#FR.active,
+#DE.active,#GR.active,#HU.active,#IS.active,#IE.active,#IT.active,#XK.active,#LV.active,#LI.active,#LT.active,#LU.active,#MD.active,#ME.active,#NL.active,
+#MK.active,#NO.active,#PL.active,#PT.active,#RO.active,#RS.active,#SK.active,#SI.active,#ES.active,#SE.active,#CH.active,#TR.active,#UA.active,#GB.active {
+    fill: rgb(0, 155, 0);
+    transition: 0.1s;
+}
+
+/* Media Query for screens with a max-width of 600px */
+@media screen and (max-width: 600px) {
+    html, body{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+    .style{
+        gap: 3vh;
+        width: 100vw;
+    }
+    .container{
+        padding: 0;
+        justify-content: space-evenly;
+        min-width: none;
+        min-height: none;
+        max-width: 70vw;
+        max-height: 35vh;
+    }
+    .map{
+        width: 70vw;
+    }
+
+    input{
+        inline-size: 50vw;
+    }
+
+}

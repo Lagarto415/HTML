@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs</title>
+    <link rel="stylesheet" href="../css/inputs.css">
+
+</head>
+<body class="style">
+    <a href="htmlpractice.html" class="back">Back</a>
+
+    <div class="forms">
+        <img src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c51f.png" alt="Auto" height="40" width="device-width" class="center">
+        
+        <form action="https://google.com/search" method="get" target="_blank"> 
+            <!-- <label for="search">Search Prompt:</label> -->
+            <input type="text" name="q" placeholder="Search Prompt" id="search" required>
+            <button type="submit">Search</button>
+        </form>
+
+        <h2>Password Inputs</h2>
+
+        <form>
+            <input type="password" name="password" id="password" placeholder="Password" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        <h2>Number Inputs</h2>
+
+        <form>
+            <input type="number" name="number" id="number" placeholder="Day of Birth" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        <h2>Email Inputs</h2>
+
+        <form>
+            <input type="email" name="email" id="email" placeholder="Email-Adress" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        <h2>Checkbox Inputs</h2>
+
+        <form>
+            <input type="checkbox" name="checkbox" id="checkbox" placeholder="Checkbox">
+            <button type="submit">Submit</button>
+        </form>
+
+        <h2>Textarea & Range Inputs</h2>
+
+        <form>
+            <textarea name="textarea" rows="3" cols="20"></textarea>
+            <input type="range" name="range" id="range" placeholder="range" min="0" max="100">
+            <button type="submit">Submit</button>
+        </form>
+
+        <h2>Select Inputs</h2>
+
+        <form>
+            <select name="FavoriteAnimal" id="Animal" size="3">
+                <option value="Dog">Dog</option>
+                <option value="Bob">Bob</option>
+                <option value="Cat">Cat</option>
+                <option value="Fish">Fish</option>
+                <option value="slug">Slug</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
+</body>
+</html>

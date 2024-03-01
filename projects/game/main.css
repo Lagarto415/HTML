@@ -57,6 +57,12 @@
     background-color: var(--game_sec); 
 }
 
+.x{
+    display: flex;
+    justify-content: space-around;
+    width: auto;
+}
+
 /* MAIN */
 
 .main{

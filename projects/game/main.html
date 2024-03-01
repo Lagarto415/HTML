@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galactic Citizen BETA</title>
+    <link rel="icon" href="../../main/img/n.png">
+    <link rel="stylesheet" href="../../main/variables.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="../../main/img/game/game_icon.png">
+            </div>
+            <div class="ressource">
+                <img src="../../main/img/game/mineral.png">
+                <p id="minerals">0</p>
+            </div>
+            <div class="ressource">
+                <img src="../../main/img/game/water.png">
+                <p id="water">0</p>
+            </div>
+            <div class="ressource">
+                <img src="../../main/img/game/gold.png">
+                <p id="gold">0</p>
+            </div>
+            <div class="ressource">
+                <img src="../../main/img/game/citizen.png">
+                <p id="citizens">0</p>
+            </div>
+            <div class="x">
+                <a href="../../index.html">
+                    <img src="../../main/img/game/x.png">
+                </a>
+            </div>
+        </div>
+        <div class="main">
+            <div class="content">
+                <div class="text">
+                    <ol>
+                        <li><img src="../../main/img/game/plus.png" onclick="upgrade('habitats')"><span>Unterkünfte: </span><span id="habitats">0</span></li>
+                        <li><img src="../../main/img/game/plus.png" onclick="upgrade('minerals')"><span>Mineralmine: Lvl </span><span id="mineralmine">0</span></li>
+                        <li><img src="../../main/img/game/plus.png" onclick="upgrade('water')"><span>Wasserpumpe: Lvl </span><span id="wasserpumpe">0</span></li>
+                        <li><img src="../../main/img/game/plus.png" onclick="upgrade('gold')"><span>Goldmine: Lvl </span><span id="goldmine">0</span></li>
+                    </ol>
+                </div>
+                <div class="text">
+                    <ol id="log">
+                    </ol>
+                </div>
+            </div>
+            <div class="build" onclick="resetGame()">
+                <img src="../../main/img/game/trash.png">
+            </div>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>

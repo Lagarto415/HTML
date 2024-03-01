@@ -1,0 +1,6 @@
+TODO:
+
+Arbeiter zuweisen
+Preise für Upgrades festlegen + onhover anzeigen
+Spielstand löschung schwerer machen
+Events

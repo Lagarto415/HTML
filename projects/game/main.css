@@ -118,3 +118,14 @@
 .text img:hover{
     cursor: pointer;
 }
+
+@media only screen and (max-width: 1550px) {
+    .ressource img, .x img{
+        width: 40px;
+        background-color: var(--game_sec);
+    }
+
+    .logo img{
+        width: 40px;
+    }
+}

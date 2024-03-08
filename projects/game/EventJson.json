@@ -1,0 +1,87 @@
+{
+    "AllEvents": [
+      {
+        "name": "Alien Encounter",
+        "options": [
+          { "optionName": "Negotiate for peace", "effect": "negotiate" },
+          { "optionName": "Defend village", "effect": "defend" }
+        ]
+      },
+      {
+        "name": "Meteor Shower",
+        "options": [
+          { "optionName": "Strengthen buildings", "effect": "strengthen" },
+          { "optionName": "Evacuate", "effect": "evacuate" }
+        ]
+      },
+      {
+        "name": "Drought",
+        "options": [
+          { "optionName": "Invest in more efficient water storage", "effect": "efficientStorage" },
+          { "optionName": "Ration water among the citizens", "effect": "rationWater" }
+        ]
+      },
+      {
+        "name": "Plague",
+        "options": [
+          { "optionName": "Invest in a hospital", "effect": "hospital" },
+          { "optionName": "Send infected citizens into the desert", "effect": "sendDesert" }
+        ]
+      },
+      {
+        "name": "Trader",
+        "options": [
+          { "optionName": "Trade resources for each other", "effect": "trade" }
+        ]
+      },
+      {
+        "name": "Solar Flare",
+        "options": [
+          { "optionName": "Turn off all electronics to make sure they are not damaged", "effect": "turnOff" },
+          { "optionName": "Build a temporary shield", "effect": "buildShield" }
+        ]
+      },
+      {
+        "name": "Civil Unrest",
+        "options": [
+          { "optionName": "Try to calm the citizens", "effect": "calm" },
+          { "optionName": "Give them more water, if they calm down", "effect": "giveWater" }
+        ]
+      },
+      {
+        "name": "Exotic Creature",
+        "options": [
+          { "optionName": "Hunt it for gold", "effect": "huntGold" },
+          { "optionName": "Tame it (can get scared in both cases)", "effect": "tame" }
+        ]
+      },
+      {
+        "name": "Festival",
+        "options": [
+          { "optionName": "Invest in a big Festival", "effect": "investFestival" },
+          { "optionName": "\"Go back to work!\"", "effect": "goBackWork" }
+        ]
+      },
+      {
+        "name": "Traveling Engineer",
+        "options": [
+          { "optionName": "Upgrade facilities for gold", "effect": "upgradeGold" }
+        ]
+      },
+      {
+        "name": "Thief",
+        "options": [
+          { "optionName": "Send him into the desert", "effect": "sendDesertThief" },
+          { "optionName": "Make him pay for it (+gold)", "effect": "payGold" }
+        ]
+      },
+      {
+        "name": "Poisonous Plant",
+        "options": [
+          { "optionName": "Leave the building alone", "effect": "leaveBuilding" },
+          { "optionName": "Try to remove the plants", "effect": "removePlants" }
+        ]
+      }
+    ]
+  }
+  

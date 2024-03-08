@@ -1,12 +1,12 @@
-const currentDate = new Date();
+let currentDate = new Date();
 
-const year = currentDate.getFullYear();
-const month = currentDate.getMonth() + 1;
-const day = currentDate.getDate();
-const hours = currentDate.getHours();
-const minutes = currentDate.getMinutes();
+let year = currentDate.getFullYear();
+let month = currentDate.getMonth() + 1;
+let day = currentDate.getDate();
+let hours = currentDate.getHours();
+let minutes = currentDate.getMinutes();
 
-const formattedDateTime = `${hours}:${minutes} ${day}-${month}-${year}`;
+let formattedDateTime = `${hours}:${minutes} ${day}.${month}.${year}`;
 
 let current_minerals = 50;
 let current_water = 0;
@@ -19,32 +19,44 @@ let gold_level = 0;
 
 let habitats = 1;
 
-const AllEvents = ["Astoroid Impact", "Earthquake", "Flood", "Friendly Alien Encouter", "Pirates", "Ship Crash"];
+let mineral_upgradeprice = [50,100,200,350,500,750,1100,1500,2000,2500,3000,3500,4000,4500,5000,5500,6000,6500,7000,7500,8000,8500,9000,9500,10000];
+let water_upgradeprice = [100,250,500,1000,3000,10000];
+let gold_upgradeprice = [1000,5000,10000,50000];
+let habitat_price = [200, 800, 1200, 1800];
 
-let eventcounter = 0;
+let AllEvents = [];
+// function addLogEntry(event) {
+//     const ol = document.getElementById("log");
+//     const li = document.createElement("li");
 
-function addLogEntry(event) {
-    const ol = document.getElementById("log");
-    const li = document.createElement("li");
+//     currentDate = new Date();
+//     year = currentDate.getFullYear();
+//     month = currentDate.getMonth() + 1;
+//     day = currentDate.getDate();
+//     hours = currentDate.getHours();
+//     minutes = currentDate.getMinutes();
 
-    li.textContent = (formattedDateTime + " - " + event);
-
-    ol.appendChild(li);
-}
+//     formattedDateTime = `${hours}:${minutes} ${day}.${month}.${year}`;
+//     console.log(formattedDateTime+" - "+event);
+// }
 
 function gameloop() {
     current_minerals += minerals_level;
     current_water += water_level;
     current_gold += gold_level;
 
-    if (eventcounter == 50) {
+    if (Math.random() > 0.995) {
         eventgeneration();
-        eventcounter = 0;
-    } else {
-        eventcounter++;
     }
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key == "r") {
+            current_minerals += 1000;
+        }
+    });
+
     saveGameState();
-}
+} 
 
 function update_hud() {
     const mineral_element = document.getElementById("minerals");
@@ -65,11 +77,21 @@ function update_hud() {
     minerallevelobj.textContent = minerals_level;
     waterlevelobj.textContent = water_level;
     goldlevelobj.textContent = gold_level;
+
+    document.getElementById("price_habitats").textContent = habitat_price[habitats-1];
+    document.getElementById("price_minerals").textContent = mineral_upgradeprice[minerals_level];
+    document.getElementById("price_water").textContent = water_upgradeprice[water_level];
+    document.getElementById("price_gold").textContent = gold_upgradeprice[gold_level];
 }
 
 function eventgeneration() {
-    let randomEvent = Math.floor(Math.random() * AllEvents.length);
-    addLogEntry(AllEvents[randomEvent]);
+    if (AllEvents.length === 0) {
+        console.error("No events loaded. Ensure events are fetched before generating.");
+        return;
+    }
+
+    const randomEventIndex = Math.floor(Math.random() * AllEvents.length);
+    eventhandler(randomEventIndex);
 }
 
 function saveGameState() {
@@ -101,6 +123,28 @@ function loadGameState() {
         habitats = gameState.habitats;
         update_hud(); // Update HUD after loading game state
     }
+    
+    // Fetch JSON data for events
+    fetchEventsData().then(events => {
+        AllEvents = events;
+        console.log('Events fetched successfully:', AllEvents);
+        eventgeneration(); // Call eventgeneration once events are fetched
+    }).catch(error => {
+        console.error('Error fetching events:', error);
+    });
+}
+
+async function fetchEventsData() {
+    try {
+        const response = await fetch('EventJson.json');
+        if (!response.ok) {
+            throw new Error('Failed to fetch events');
+        }
+        const eventData = await response.json();
+        return eventData.AllEvents;
+    } catch (error) {
+        throw new Error('Error fetching events:', error);
+    }
 }
 
 window.addEventListener('load', () => {
@@ -109,25 +153,49 @@ window.addEventListener('load', () => {
 
 function upgrade(object) {
     if (object == "minerals") {
-
-        if (current_minerals >= 50) {
-            current_minerals -= 50;
+        if (current_minerals >= mineral_upgradeprice[minerals_level]) {
+            current_minerals -= mineral_upgradeprice[minerals_level];
             minerals_level++;
+            income("minerals", -mineral_upgradeprice[minerals_level-1]);
             console.log("minerals upgraded");
         }
         else {
             console.log("Not enough minerals");
         }
-
     } else if (object == "water") {
-        console.log("water upgraded");
+        if (current_minerals >= water_upgradeprice[water_level]) {
+            current_minerals -= water_upgradeprice[water_level];
+            water_level++;    
+            income("water", -water_upgradeprice[water_level-1]);
+            console.log("water upgraded");
+        }
+        else {
+            console.log("Not enough minerals");
+        }
     } else if (object == "gold") {
-        console.log("gold upgraded");
+        if (current_minerals >= gold_upgradeprice[gold_level]) {
+            current_minerals -= gold_upgradeprice[gold_level];
+            gold_level++;
+            income("gold", -gold_upgradeprice[gold_level-1]);
+            console.log("gold upgraded");
+        }
+        else {
+            console.log("Not enough minerals");
+        }
     } else if (object == "habitats") {
-        console.log("habitats upgraded");
+        if (current_minerals >= habitat_price[habitats-1]) {
+            current_minerals -= habitat_price[habitats-1];
+            habitats++;
+            income("habitats", -habitat_price[habitats-2]);
+            console.log("habitats upgraded");
+        }
+        else {
+            console.log("Not enough minerals");
+        }
     } else {
         console.log("error in upgrade function: Not a valid object");
     }
+
 }
 
 function resetGame() {
@@ -145,6 +213,175 @@ function resetGame() {
     habitats = 1;
 }
 
+function buildmenu(action) {
+    if (action == "open") {
+        document.getElementById("buildmenu").style.visibility = "visible";
 
-setInterval(gameloop, 3000);
-setInterval(update_hud, 500);
+        document.getElementById("build_button").style.visibility = "hidden";
+        document.getElementById("expedition_button").style.visibility = "hidden";
+        document.getElementById("settings_button").style.visibility = "hidden";
+    }
+    else if (action == "close") {
+        document.getElementById("buildmenu").style.visibility = "hidden";
+        document.getElementById("build_button").style.visibility = "visible";
+        document.getElementById("expedition_button").style.visibility = "visible";
+        document.getElementById("settings_button").style.visibility = "visible";
+        update_hud();
+    }
+    else{
+        console.log("error in buildmenu function: Not a valid action");
+    }
+}
+
+async function income(what, how_much) {
+    let obj = document.getElementById("mineral_income");
+    if (what == "minerals") {
+
+        if (how_much < 0) {
+            obj.style.color = "red";
+        } 
+        else if (how_much == 0) {
+            how_much = "";
+        }
+        else {
+            obj.style.color = "green";
+        }
+        obj.textContent = how_much;
+        await wait(1000); // Wait for 3000 milliseconds
+        obj.textContent = "";
+    } else if (what == "water") {
+        if (how_much < 0) {
+            obj.style.color = "red";
+        } else {
+            obj.style.color = "green";
+        }
+        obj.textContent = how_much;
+        await wait(1000); // Wait for 3000 milliseconds
+        obj.textContent = "";
+    } else if (what == "gold") {
+        if (how_much < 0) {
+            obj.style.color = "red";
+        }
+        else {
+            obj.style.color = "green";
+        }
+        obj.textContent = how_much;
+        await wait(1000); // Wait for 3000 milliseconds
+        obj.textContent = "";
+    } else if (what == "habitats") {
+        if (how_much < 0) {
+            obj.style.color = "red";
+        }
+        else {
+            obj.style.color = "green";
+        }
+        obj.textContent = how_much;
+        await wait(1000); // Wait for 3000 milliseconds
+        obj.textContent = "";
+    } else {
+        console.log("error in income function: Not a valid income type");
+    }
+}
+
+function wait(time) {
+    return new Promise(resolve => setTimeout(resolve, time));
+}
+
+function eventhandler(event) {
+    const selectedEvent = AllEvents[event];
+    console.log('Event:', selectedEvent.name);
+
+    if (selectedEvent.options.length >= 2) {
+        console.log('Option 1:', selectedEvent.options[0].optionName);
+        console.log('Option 2:', selectedEvent.options[1].optionName);
+        console.log('--------------------');
+
+        // Assuming the player chooses Option 1
+        executeEffect(selectedEvent.options[0].effect);
+    } else {
+        console.log('Event does not have both options');
+    }
+}
+
+
+async function executeEffect(effect) {
+    switch (effect) {
+        case "negotiate":
+            console.log("Negotiate for peace effect");
+            break;
+        case "defend":
+            console.log("Defend village effect");
+            break;
+        case "strengthen":
+            console.log("Strengthen buildings effect");
+            break;
+        case "evacuate":
+            console.log("Evacuate effect");
+            break;
+        case "efficientStorage":
+            console.log("Invest in more efficient water storage effect");
+            break;
+        case "rationWater":
+            console.log("Ration water among the citizens effect");
+            break;
+        case "hospital":
+            console.log("Invest in a hospital effect");
+            break;
+        case "sendDesert":
+            console.log("Send infected citizens into the desert effect");
+            break;
+        case "trade":
+            console.log("Trade resources for each other effect");
+            break;
+        case "turnOff":
+            console.log("Turn off all electronics effect");
+            break;
+        case "buildShield":
+            console.log("Build a temporary shield effect");
+            break;
+        case "calm":
+            console.log("Try to calm the citizens effect");
+            break;
+        case "giveWater":
+            console.log("Give them more water, if they calm down effect");
+            break;
+        case "huntGold":
+            console.log("Hunt it for gold effect");
+            break;
+        case "tame":
+            console.log("Tame it (can get scared in both cases) effect");
+            break;
+        case "investFestival":
+            console.log("Invest in a big Festival effect");
+            break;
+        case "goBackWork":
+            console.log("Go back to work! effect");
+            break;
+        case "upgradeGold":
+            console.log("Upgrade facilities for gold effect");
+            break;
+        case "sendDesertThief":
+            console.log("Send him into the desert effect");
+            break;
+        case "payGold":
+            console.log("Make him pay for it (+gold) effect");
+            break;
+        case "leaveBuilding":
+            console.log("Leave the building alone effect");
+            break;
+        case "removePlants":
+            console.log("Try to remove the plants effect");
+            break;
+        default:
+            console.log("Invalid effect");
+    }
+}
+
+
+
+
+
+
+
+setInterval(gameloop, 1500);
+setInterval(update_hud, 100);

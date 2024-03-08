@@ -1,6 +1,44 @@
 TODO:
 
 Arbeiter zuweisen
-Preise für Upgrades festlegen + onhover anzeigen
 Spielstand löschung schwerer machen
-Events
+Find,buy,get Items with temporary effects
+Politics
+Worker Mood
+More Buildings (Defence, hospital, Market, Wall)
+
+EVENTS:
+- Alien Encouter:
+    - negotiate for peace
+    - defend village
+- Meteor Shower:
+    - strengthen Buildings
+    - evacuate
+- Drought:
+    - invest in more efficient water storage
+    - ration water among the citizens
+- Plague
+    - invest in a hospital
+    - send infected citizens into the desert
+- Trader:
+    - Trade ressources for each other
+- Solar Flare:
+    - Turn off all electronics to make sure they are not damaged
+    - Build a temporary shield
+- Civil Unrest:
+    - Try to calm the citizens
+    - Give them more water, if they calm down
+- Exotic Creature:
+    - Hunt it for gold
+    - Tame it (can get scared in both cases)
+- Festival:
+    - Invest in a big Festival
+    - "Go back to work!"
+- Traveling Engineer:
+    - Upgrade facilities for gold
+- Thief (A citizen has been caught steeling from other citizens):
+    - send him into the desert
+    - make him pay for it (+gold)
+- Poisonous Plant (A building has been infected by a Poisonous plant):
+    - leave the building alone
+    - Try to remove the plants

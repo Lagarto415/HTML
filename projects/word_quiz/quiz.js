@@ -1,11 +1,3 @@
-/*
-1.  Zufällige Abkürzung aus abk anzeigen
-2.  Input mit gleichstelligen Ausg vergleichen (no case sensetive or space)
-3.  Entweder Richtig oder Falsch anzeigen
-(4.) Elemente hinzufügen
-(5.) 
-*/
-// Define your arrays initially
 let Abk = [];
 let Ausg = [];
 const abkobj = document.getElementById('abk');
@@ -49,19 +41,19 @@ function dk() {
     ausgobj.value = Ausg[x];
 }
 
-// Fetch the data from the JSON file
-fetch('../../main/json/data.json')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`Failed to fetch words.json: ${response.status} ${response.statusText}`);
-        }
-        return response.json(); // Parses the JSON response into a JavaScript object
-    })
-    .then(data => {
-        // Extract Abk and Ausg arrays from the fetched data
-        Abk = data.words.map(entry => entry.Abk);
-        Ausg = data.words.map(entry => entry.Ausg);
-    })
-    .catch(error => {
-        console.error('Error fetching or parsing words.json:', error);
-    });
+// // Fetch the data from the JSON file
+// fetch('../../main/json/data.json')
+//     .then(response => {
+//         if (!response.ok) {
+//             throw new Error(`Failed to fetch words.json: ${response.status} ${response.statusText}`);
+//         }
+//         return response.json(); // Parses the JSON response into a JavaScript object
+//     })
+//     .then(data => {
+//         // Extract Abk and Ausg arrays from the fetched data
+//         Abk = data.words.map(entry => entry.Abk);
+//         Ausg = data.words.map(entry => entry.Ausg);
+//     })
+//     .catch(error => {
+//         console.error('Error fetching or parsing words.json:', error);
+//     });

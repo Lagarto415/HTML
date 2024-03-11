@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galactic Citizen BETA</title>
+    <title>Lagarto5.de | Galactic Citizen</title>
     <link rel="icon" href="../../main/img/game/game_icon.png">
     <link rel="stylesheet" href="../../main/variables.css">
     <link rel="stylesheet" href="main.css">
@@ -16,47 +16,58 @@
             </div>
             <div class="ressource">
                 <img src="../../main/img/game/mineral.png">
-                <p id="minerals">0</p>
+                <p><span id="minerals">0</span><span id="mineral_income"></span></p>
             </div>
             <div class="ressource">
                 <img src="../../main/img/game/water.png">
-                <p id="water">0</p>
+                <p><span id="water">0</span><span id="water_income"></span></p>
             </div>
             <div class="ressource">
                 <img src="../../main/img/game/gold.png">
-                <p id="gold">0</p>
+                <p><span id="gold">0</span><span id="gold_income"></span></p>
             </div>
             <div class="ressource">
                 <img src="../../main/img/game/citizen.png">
-                <p id="citizens">0</p>
+                <p><span id="citizens">0</span><span id="citizen_income"></span></p>
             </div>
             <div class="x">
-                <img src="../../main/img/game/upload.png" onclick="upload()">
-                <img src="../../main/img/game/download.png" onclick="download()">
+                <!-- <img src="../../main/img/game/upload.png" onclick="upload()">
+                <img src="../../main/img/game/download.png" onclick="download()"> -->
                 <a href="../../index.html">
                     <img src="../../main/img/game/x.png">
                 </a>
             </div>
         </div>
         <div class="main">
-            <div class="content">
-                <div class="text">
-                    <ol>
-                        <li><img src="../../main/img/game/plus.png" onclick="upgrade('habitats')"><span>Unterkünfte: </span><span id="habitats">0</span></li>
-                        <li><img src="../../main/img/game/plus.png" onclick="upgrade('minerals')"><span>Mineralmine: Lvl </span><span id="mineralmine">0</span></li>
-                        <li><img src="../../main/img/game/plus.png" onclick="upgrade('water')"><span>Wasserpumpe: Lvl </span><span id="wasserpumpe">0</span></li>
-                        <li><img src="../../main/img/game/plus.png" onclick="upgrade('gold')"><span>Goldmine: Lvl </span><span id="goldmine">0</span></li>
-                    </ol>
+            <div class="buildmenu" id="buildmenu"> 
+                <div class="buildimages">
+                    <a onclick="upgrade('habitats')"><img src="../../main/img/game/newhabitat.png"></a>
+                    <a onclick="upgrade('minerals')"><img src="../../main/img/game/upgrademineral.png"></a>
+                    <a onclick="upgrade('water')"><img src="../../main/img/game/upgradewater.png"></a>
+                    <a onclick="upgrade('gold')"><img src="../../main/img/game/upgradegold.png"></a>
                 </div>
-                <div class="text">
-                    <ol id="log">
-                    </ol>
+                <div class="prices">
+                    <p><span id="price_habitats">150</span></p>
+                    <p><span id="price_minerals">50</span></p>
+                    <p><span id="price_water">200</span></p>
+                    <p><span id="price_gold">1000</span></p>
+                </div>
+                <div class="buildmenu_close">
+                    <a onclick="buildmenu('close')"><img src="../../main/img/game/x.png"></a>
                 </div>
             </div>
-            <div class="build" onclick="resetGame()">
-                <img src="../../main/img/game/trash.png">
+            <div class="stats">
+                <p>Unterkünfte: <span id="habitats"></span></p>
+                <p>Mineralmine Level: <span id="mineralmine"></span></p>
+                <p>Wasserpumpe Level: <span id="wasserpumpe"></span></p>
+                <p>Goldmine Level: <span id="goldmine"></span></p>
             </div>
-        </div>
+            <div class="buttons">
+                <button id="expedition_button">Expedition</button>
+                <button id="build_button" onclick="buildmenu('open')">Build</button>
+                <button id="settings_button">Settings</button>
+            </div>
+        </div>        
     </div>
     
     <script src="game.js"></script>

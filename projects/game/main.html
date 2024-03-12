@@ -31,8 +31,6 @@
                 <p><span id="citizens">0</span><span id="citizen_income"></span></p>
             </div>
             <div class="x">
-                <!-- <img src="../../main/img/game/upload.png" onclick="upload()">
-                <img src="../../main/img/game/download.png" onclick="download()"> -->
                 <a href="../../index.html">
                     <img src="../../main/img/game/x.png">
                 </a>
@@ -41,26 +39,44 @@
         <div class="main">
             <div class="buildmenu" id="buildmenu"> 
                 <div class="buildimages">
-                    <a onclick="upgrade('habitats')"><img src="../../main/img/game/newhabitat.png"></a>
-                    <a onclick="upgrade('minerals')"><img src="../../main/img/game/upgrademineral.png"></a>
-                    <a onclick="upgrade('water')"><img src="../../main/img/game/upgradewater.png"></a>
-                    <a onclick="upgrade('gold')"><img src="../../main/img/game/upgradegold.png"></a>
-                </div>
-                <div class="prices">
-                    <p><span id="price_habitats">150</span></p>
-                    <p><span id="price_minerals">50</span></p>
-                    <p><span id="price_water">200</span></p>
-                    <p><span id="price_gold">1000</span></p>
+                    <div class="builditem">
+                        <a onclick="upgrade('habitats')" id="buildobj"><img src="../../main/img/game/newhabitat.png"></a>
+                        <p><img src="../../main/img/game/mineral.png"><span id="price_habitats">150</span></p>
+                    </div>
+                    <div class="builditem">
+                        <a onclick="upgrade('minerals')" id="buildobj"><img src="../../main/img/game/upgrademineral.png"></a>
+                        <p><img src="../../main/img/game/mineral.png"><span id="price_minerals">50</span></p>
+                    </div>
+                    <div class="builditem">
+                        <a onclick="upgrade('water')" id="buildobj"><img src="../../main/img/game/upgradewater.png"></a>
+                        <p><img src="../../main/img/game/mineral.png"><span id="price_water">200</span></p>
+                    </div>
                 </div>
                 <div class="buildmenu_close">
                     <a onclick="buildmenu('close')"><img src="../../main/img/game/x.png"></a>
                 </div>
             </div>
+            <div class="eventpopup" id="eventpopup">
+                <div class="event_name">
+                    <p id="eventname">EVENTNAME</p>
+                </div>
+                <div>
+                    <p id="event_description">EIN EVENT IST AUFGETRETEN</p>
+                </div>
+                <div>
+                    <p id="event_optiontext1"></p>
+                    <p id="event_optiontext2"></p>
+                </div>
+                <div class="event_options">
+                    <button id="option1_button">Option 1</button>
+                    <button onclick="eventmenu('close')">Ignorieren</button>
+                    <button id="option2_button">Option 2</button>
+                </div>
+            </div>
             <div class="stats">
                 <p>Unterkünfte: <span id="habitats"></span></p>
                 <p>Mineralmine Level: <span id="mineralmine"></span></p>
-                <p>Wasserpumpe Level: <span id="wasserpumpe"></span></p>
-                <p>Goldmine Level: <span id="goldmine"></span></p>
+                <p>Wasserpumpen: <span id="wasserpumpe"></span></p>
             </div>
             <div class="buttons">
                 <button id="expedition_button">Expedition</button>

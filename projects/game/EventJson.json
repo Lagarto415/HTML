@@ -1,87 +1,186 @@
 {
-    "AllEvents": [
-      {
-        "name": "Alien Encounter",
-        "options": [
-          { "optionName": "Negotiate for peace", "effect": "negotiate" },
-          { "optionName": "Defend village", "effect": "defend" }
-        ]
-      },
-      {
-        "name": "Meteor Shower",
-        "options": [
-          { "optionName": "Strengthen buildings", "effect": "strengthen" },
-          { "optionName": "Evacuate", "effect": "evacuate" }
-        ]
-      },
-      {
-        "name": "Drought",
-        "options": [
-          { "optionName": "Invest in more efficient water storage", "effect": "efficientStorage" },
-          { "optionName": "Ration water among the citizens", "effect": "rationWater" }
-        ]
-      },
-      {
-        "name": "Plague",
-        "options": [
-          { "optionName": "Invest in a hospital", "effect": "hospital" },
-          { "optionName": "Send infected citizens into the desert", "effect": "sendDesert" }
-        ]
-      },
-      {
-        "name": "Trader",
-        "options": [
-          { "optionName": "Trade resources for each other", "effect": "trade" }
-        ]
-      },
-      {
-        "name": "Solar Flare",
-        "options": [
-          { "optionName": "Turn off all electronics to make sure they are not damaged", "effect": "turnOff" },
-          { "optionName": "Build a temporary shield", "effect": "buildShield" }
-        ]
-      },
-      {
-        "name": "Civil Unrest",
-        "options": [
-          { "optionName": "Try to calm the citizens", "effect": "calm" },
-          { "optionName": "Give them more water, if they calm down", "effect": "giveWater" }
-        ]
-      },
-      {
-        "name": "Exotic Creature",
-        "options": [
-          { "optionName": "Hunt it for gold", "effect": "huntGold" },
-          { "optionName": "Tame it (can get scared in both cases)", "effect": "tame" }
-        ]
-      },
-      {
-        "name": "Festival",
-        "options": [
-          { "optionName": "Invest in a big Festival", "effect": "investFestival" },
-          { "optionName": "\"Go back to work!\"", "effect": "goBackWork" }
-        ]
-      },
-      {
-        "name": "Traveling Engineer",
-        "options": [
-          { "optionName": "Upgrade facilities for gold", "effect": "upgradeGold" }
-        ]
-      },
-      {
-        "name": "Thief",
-        "options": [
-          { "optionName": "Send him into the desert", "effect": "sendDesertThief" },
-          { "optionName": "Make him pay for it (+gold)", "effect": "payGold" }
-        ]
-      },
-      {
-        "name": "Poisonous Plant",
-        "options": [
-          { "optionName": "Leave the building alone", "effect": "leaveBuilding" },
-          { "optionName": "Try to remove the plants", "effect": "removePlants" }
-        ]
-      }
-    ]
-  }
-  
+  "AllEvents": [
+    {
+      "name": "Aliens",
+      "description": "Ein großes, dir fremdes Schiff landet in der Nähe deines Dorfes. Es scheint nach etwas zu suchen, wobei es sich deinem Dorf nähert.",
+      "options": [
+        {
+          "name": "Option1",
+          "optionName": "Frieden verhandeln",
+          "effect": "negotiate"
+        },
+        {
+          "name": "Option2",
+          "optionName": "Dorf verteidigen",
+          "effect": "defend"
+        }
+      ]
+    },
+    {
+      "name": "Meteoren",
+      "description": "Im Himmel erscheinen viele helle Punkte. Durch dein Training weißt du: das kann nur eines heißen: Meteoren!",
+      "options": [
+        {
+          "name": "Option1",
+          "optionName": "Gebäude verstärken",
+          "effect": "strengthen"
+        },
+        {
+          "name": "Option2",
+          "optionName": "Dorf evakuieren",
+          "effect": "evacuate"
+        }
+      ]
+    },
+    {
+      "name": "Dürre",
+      "description": "Es ist schon etwas her, dass es geregnet hat. Nun fangen die Pflanzen an zu vertrocknen.",
+      "options": [
+        {
+          "name": "Option1",
+          "optionName": "In effizientere Wasserlagerung investieren",
+          "effect": "efficientStorage"
+        },
+        {
+          "name": "Option2",
+          "optionName": "Wasser unter den Dorfbewohnern rationieren",
+          "effect": "rationWater"
+        }
+      ]
+    },
+    {
+      "name": "Virus",
+      "description": "Einer der Dorfbewohner hustet schon ein paar Tage ständig",
+      "options": [
+        {
+          "name": "Option1",
+          "optionName": "In ein Krankenhaus Investieren",
+          "effect": "hospital"
+        },
+        {
+          "name": "Option2",
+          "optionName": "Infizierten Dorfbewohner in die leere kalte Wüste schicken",
+          "effect": "sendDesert"
+        }
+      ]
+    },
+    {
+      "name": "Händler",
+      "description": "Eine unbekannte Person erscheint in deinem Dorf. Es stellt sich herraus, dass er ein Händler ist.",
+      "options": [
+        {
+          "name": "Option1",
+          "optionName": "Verhandeln",
+          "effect": "trade"
+        }
+      ]
+    },
+    {
+      "name": "Sonnensturm",
+      "description": "Die Sensoren im Hauptgebäude schlagen Alarm. Ein Sonnensturm steht bevor!",
+      "options": [
+        {
+          "name": "Option1",
+          "optionName": "Alle Geräte ausschalten, um den Schaden zu minimieren",
+          "effect": "turnOff"
+        },
+        {
+          "name": "Option2",
+          "optionName": "Einen Schild installieren",
+          "effect": "buildShield"
+        }
+      ]
+    },
+    {
+      "name": "Unruhe im Dorf",
+      "description": "Die Dorfbewohner sind unzufrieden und bewegen sich in Richtung deines Hauses.",
+      "options": [
+        {
+          "name": "Option1",
+          "optionName": "Versuche sie zu beruhigen",
+          "effect": "negotiate"
+        },
+        {
+          "name": "Option2",
+          "optionName": "Verspreche ihnen mehr Wasser, wenn sie sich beruhigen",
+          "effect": "negotiate"
+        }
+      ]
+    },
+    {
+      "name": "Exotische Kreatur",
+      "description": "Ein Dorfbewohner berichtet von einem exotischen Wesen in der Nähe des Dorfes.",
+      "options": [
+        {
+          "name": "Option1",
+          "optionName": "Jage es um sein Fell zu verkaufen",
+          "effect": "huntGold"
+        },
+        {
+          "name": "Option2",
+          "optionName": "Versuche es zu zähmen",
+          "effect": "tame"
+        }
+      ]
+    },
+    {
+      "name": "Festival",
+      "description": "Das Erntedankfest steht an und die Dorfbewohner freuen sich darauf.",
+      "options": [
+        {
+          "name": "Option1",
+          "optionName": "Investiere in das größte Festival, dass die Menschheit jemals gesehen hat",
+          "effect": "investFestival"
+        },
+        {
+          "name": "Option2",
+          "optionName": "Zurück an die Arbeit!",
+          "effect": "goBackWork"
+        }
+      ]
+    },
+    {
+      "name": "Reisender Ingeneur",
+      "description": "Eine unbekannte Person erscheint in deinem Dorf. Es stellt sich herraus, dass er ein Ingeneur ist. Er bietet dir an ein paar Gebäude in deinem Dorf zu verbessern",
+      "options": [
+        {
+          "name": "Option1",
+          "optionName": "Vorschläge ansehen",
+          "effect": "upgradeGold"
+        }
+      ]
+    },
+    {
+      "name": "Dieb",
+      "description": "Ein Dorfbewohner meldet einen der Dorfbewohner auf frischer Tat beim Diebstal ertappt hat.",
+      "options": [
+        {
+          "name": "Option1",
+          "optionName": "Den Dieb in die Wüste schicken",
+          "effect": "sendDesertThief"
+        },
+        {
+          "name": "Option2",
+          "optionName": "Zwing den Dieb Strafe zu zahlen",
+          "effect": "payGold"
+        }
+      ]
+    },
+    {
+      "name": "Giftige Pflanze",
+      "description": "Sah das Haus immer schon so aus? Nein, es scheint eine exotische Pflanze zu sein, die das Haus befallen hat. Wahrscheinlich ist sie giftig.",
+      "options": [
+        {
+          "name": "Option1",
+          "optionName": "Das Gebäude lieber für immer verlassen",
+          "effect": "leaveBuilding"
+        },
+        {
+          "name": "Option2",
+          "optionName": "Versuchen die Pflanzen zu entfernen",
+          "effect": "removePlants"
+        }
+      ]
+    }
+  ]
+}

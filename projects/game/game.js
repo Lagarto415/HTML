@@ -25,27 +25,13 @@ let gold_upgradeprice = [1000,5000,10000,50000];
 let habitat_price = [200, 800, 1200, 1800];
 
 let AllEvents = [];
-// function addLogEntry(event) {
-//     const ol = document.getElementById("log");
-//     const li = document.createElement("li");
-
-//     currentDate = new Date();
-//     year = currentDate.getFullYear();
-//     month = currentDate.getMonth() + 1;
-//     day = currentDate.getDate();
-//     hours = currentDate.getHours();
-//     minutes = currentDate.getMinutes();
-
-//     formattedDateTime = `${hours}:${minutes} ${day}.${month}.${year}`;
-//     console.log(formattedDateTime+" - "+event);
-// }
 
 function gameloop() {
     current_minerals += minerals_level;
     current_water += water_level;
     current_gold += gold_level;
 
-    if (Math.random() > 0.995) {
+    if (Math.random() > 0.990) {
         eventgeneration();
     }
 
@@ -69,19 +55,17 @@ function update_hud() {
     const waterlevelobj = document.getElementById("wasserpumpe");
     const goldlevelobj = document.getElementById("goldmine");
 
-    mineral_element.textContent = current_minerals;
-    water_element.textContent = current_water;
-    gold_element.textContent = current_gold;
+    mineral_element.textContent = current_minerals + " Mineralien";
+    water_element.textContent = current_water + " Wasser";
+    gold_element.textContent = current_gold + " Gold";
     citizen_element.textContent = current_citizens + " / " + habitats * 4;
     habitatsobj.textContent = habitats;
     minerallevelobj.textContent = minerals_level;
     waterlevelobj.textContent = water_level;
-    goldlevelobj.textContent = gold_level;
 
     document.getElementById("price_habitats").textContent = habitat_price[habitats-1];
     document.getElementById("price_minerals").textContent = mineral_upgradeprice[minerals_level];
     document.getElementById("price_water").textContent = water_upgradeprice[water_level];
-    document.getElementById("price_gold").textContent = gold_upgradeprice[gold_level];
 }
 
 function eventgeneration() {
@@ -150,6 +134,14 @@ async function fetchEventsData() {
 window.addEventListener('load', () => {
     loadGameState();
 });
+
+function pauseInterval() {
+    clearInterval(intervalId); // Clears the interval
+}
+
+function resumeInterval() {
+    intervalId = setInterval(gameloop, 1000); // Restarts the interval
+}
 
 function upgrade(object) {
     if (object == "minerals") {
@@ -220,6 +212,7 @@ function buildmenu(action) {
         document.getElementById("build_button").style.visibility = "hidden";
         document.getElementById("expedition_button").style.visibility = "hidden";
         document.getElementById("settings_button").style.visibility = "hidden";
+        pauseInterval();
     }
     else if (action == "close") {
         document.getElementById("buildmenu").style.visibility = "hidden";
@@ -227,9 +220,32 @@ function buildmenu(action) {
         document.getElementById("expedition_button").style.visibility = "visible";
         document.getElementById("settings_button").style.visibility = "visible";
         update_hud();
+        resumeInterval();
     }
     else{
         console.log("error in buildmenu function: Not a valid action");
+    }
+}
+
+function eventmenu(action){
+    if (action == "open") {
+        pauseInterval();
+        document.getElementById("eventpopup").style.visibility = "visible";
+
+        document.getElementById("build_button").style.visibility = "hidden";
+        document.getElementById("expedition_button").style.visibility = "hidden";
+        document.getElementById("settings_button").style.visibility = "hidden";
+    }
+    else if (action == "close") {
+        document.getElementById("eventpopup").style.visibility = "hidden";
+        document.getElementById("build_button").style.visibility = "visible";
+        document.getElementById("expedition_button").style.visibility = "visible";
+        document.getElementById("settings_button").style.visibility = "visible";
+        update_hud();
+        resumeInterval();
+    }
+    else{
+        console.log("error in eventmenu function: Not a valid action");
     }
 }
 
@@ -247,7 +263,7 @@ async function income(what, how_much) {
             obj.style.color = "green";
         }
         obj.textContent = how_much;
-        await wait(1000); // Wait for 3000 milliseconds
+        await wait(2000); // Wait for 3000 milliseconds
         obj.textContent = "";
     } else if (what == "water") {
         if (how_much < 0) {
@@ -256,7 +272,7 @@ async function income(what, how_much) {
             obj.style.color = "green";
         }
         obj.textContent = how_much;
-        await wait(1000); // Wait for 3000 milliseconds
+        await wait(2000); // Wait for 3000 milliseconds
         obj.textContent = "";
     } else if (what == "gold") {
         if (how_much < 0) {
@@ -266,7 +282,7 @@ async function income(what, how_much) {
             obj.style.color = "green";
         }
         obj.textContent = how_much;
-        await wait(1000); // Wait for 3000 milliseconds
+        await wait(2000); // Wait for 3000 milliseconds
         obj.textContent = "";
     } else if (what == "habitats") {
         if (how_much < 0) {
@@ -276,7 +292,7 @@ async function income(what, how_much) {
             obj.style.color = "green";
         }
         obj.textContent = how_much;
-        await wait(1000); // Wait for 3000 milliseconds
+        await wait(2000); // Wait for 3000 milliseconds
         obj.textContent = "";
     } else {
         console.log("error in income function: Not a valid income type");
@@ -294,12 +310,36 @@ function eventhandler(event) {
     if (selectedEvent.options.length >= 2) {
         console.log('Option 1:', selectedEvent.options[0].optionName);
         console.log('Option 2:', selectedEvent.options[1].optionName);
-        console.log('--------------------');
+
+        eventmenu('open');
+
+        const eventnameobj = document.getElementById('eventname');
+        const eventdescriptionobj = document.getElementById('event_description')
+
+        const option1_button = document.getElementById('option1_button');
+        const option2_button = document.getElementById('option2_button');
+        
+        const option1_text = document.getElementById('event_optiontext1');
+        const option2_text = document.getElementById('event_optiontext2');
+
+
+        eventnameobj.innerHTML = selectedEvent.name;
+        eventdescriptionobj.innerHTML = selectedEvent.description;
+        option1_text.innerHTML = ("Option1: "+ selectedEvent.options[0].optionName);
+        option2_text.innerHTML = ("Option2: "+ selectedEvent.options[1].optionName);
+
+        option1_button.addEventListener('click', function() {
+            executeEffect(selectedEvent.options[0].effect);    
+            eventmenu('close'); 
+        });
+        option2_button.addEventListener('click', function() {
+            executeEffect(selectedEvent.options[1].effect);  
+            eventmenu('close');   
+        });
 
         // Assuming the player chooses Option 1
-        executeEffect(selectedEvent.options[0].effect);
     } else {
-        console.log('Event does not have both options');
+        executeEffect(selectedEvent.options[0].effect);     
     }
 }
 
@@ -377,11 +417,5 @@ async function executeEffect(effect) {
     }
 }
 
-
-
-
-
-
-
-setInterval(gameloop, 1500);
+let intervalId = setInterval(gameloop, 1000);
 setInterval(update_hud, 100);

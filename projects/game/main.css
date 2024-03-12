@@ -78,6 +78,7 @@ html{
     border-radius: 10px;
     min-height: 40vh;
     position: relative;
+    height: 75vh;
 }
 
 .stats {
@@ -127,28 +128,36 @@ html{
     background-color: var(--game_bg);
     border: 2px solid white;
     width: 50%;
-    height: 50%;
+    height: 80%;
     visibility: hidden;
 }
 
-.buildimages img{
-    width: 80%;
+.builditem img{
+    height: 25px;
 }
 
-.buildimages a:hover{
+#buildobj img{
+    height: 80%;
+    width: 100%;
+}
+
+.builditem a:hover{
     cursor: pointer;
-    transform: scale(1.05);
 }
 
 .buildimages{
     display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
-.prices{
+.builditem{
     display: flex;
-    justify-content: space-around;
-    gap: 50px;
-    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
 }
 
 .buildmenu_close{
@@ -163,6 +172,41 @@ html{
 
 .buildmenu_close a:hover{
     cursor: pointer;
+}
+
+.eventpopup{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 25px;
+    background-color: var(--game_bg);
+    border: 2px solid white;
+    width: 50%;
+    height: 80%;
+    visibility: hidden;
+}
+
+.event_options {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+.event_options button{
+    width: 90%;
+    background-color: var(--game_sec);
+    border: 1px solid white;
+    padding-block: 10px;
+    font-size: 15px;
+}
+.event_name{
+    font-size: 25px;
 }
 
 @media only screen and (max-width: 1550px) {

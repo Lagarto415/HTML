@@ -32,7 +32,7 @@ function gameloop() {
     current_gold += gold_level;
 
     if (Math.random() > 0.990) {
-        eventgeneration();
+        eventgeneration(); // Move this line inside the condition
     }
 
     document.addEventListener('keydown', function(event) {
@@ -42,7 +42,7 @@ function gameloop() {
     });
 
     saveGameState();
-} 
+}
 
 function update_hud() {
     const mineral_element = document.getElementById("minerals");
@@ -73,7 +73,7 @@ function eventgeneration() {
         console.error("No events loaded. Ensure events are fetched before generating.");
         return;
     }
-
+    console.log("Event generated!");
     const randomEventIndex = Math.floor(Math.random() * AllEvents.length);
     eventhandler(randomEventIndex);
 }
@@ -112,10 +112,10 @@ function loadGameState() {
     fetchEventsData().then(events => {
         AllEvents = events;
         console.log('Events fetched successfully:', AllEvents);
-        eventgeneration(); // Call eventgeneration once events are fetched
     }).catch(error => {
         console.error('Error fetching events:', error);
     });
+    
 }
 
 async function fetchEventsData() {

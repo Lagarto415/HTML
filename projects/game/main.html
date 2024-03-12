@@ -44,11 +44,11 @@
                         <p><img src="../../main/img/game/mineral.png"><span id="price_habitats">150</span></p>
                     </div>
                     <div class="builditem">
-                        <a onclick="upgrade('minerals')" id="buildobj"><img src="../../main/img/game/upgrademineral.png"></a>
+                        <a onclick="buildable('open','mine')" id="buildobj"><img src="../../main/img/game/upgrademineral.png"></a>
                         <p><img src="../../main/img/game/mineral.png"><span id="price_minerals">50</span></p>
                     </div>
                     <div class="builditem">
-                        <a onclick="upgrade('water')" id="buildobj"><img src="../../main/img/game/upgradewater.png"></a>
+                        <a onclick="buildable('open','water')" id="buildobj"><img src="../../main/img/game/upgradewater.png"></a>
                         <p><img src="../../main/img/game/mineral.png"><span id="price_water">200</span></p>
                     </div>
                 </div>
@@ -73,6 +73,58 @@
                     <button id="option2_button">Option 2</button>
                 </div>
             </div>
+            <div class="buildable" id="buildable_mine">
+                <div class="buildable_close">
+                    <a onclick="buildable('close','mine')"><img src="../../main/img/game/x.png"></a>
+                </div>
+                <div class="buildable_headline">
+                    <p id="b_headline">MINE</p>
+                </div>
+                <div class="buildable_image">
+                    <img src="../../main/img/game/mine.png"">
+                </div>
+                <div class="buildable_stats">
+                    <p>Mineralien pro Sekunde: <span>0</span></p>
+                    <p>Effizienz: <span>0</span></p>
+                    <p>Arbeiter: <span>0 / 0</span></p>
+                </div>
+                <div class="buildable_actions">
+                    <div class="buildable_actions_upgrade">
+                        <button>Verbessern</button>
+                        <button>Effizienz steigern</button>
+                    </div>
+                    <div class="buildable_actions_upgrade">
+                        <button>Arbeiter zuweisen</button>
+                        <button>Arbeiter entfernen</button>
+                    </div>
+                </div>
+            </div>
+            <div class="buildable" id="buildable_water">
+                <div class="buildable_close">
+                    <a onclick="buildable('close','water')"><img src="../../main/img/game/x.png"></a>
+                </div>
+                <div class="buildable_headline">
+                    <p id="b_headline">MINE</p>
+                </div>
+                <div class="buildable_image">
+                    <img src="../../main/img/game/waterpump.png"">
+                </div>
+                <div class="buildable_stats">
+                    <p>Wasser pro Sekunde: <span>0</span></p>
+                    <p>Effizienz: <span>0</span></p>
+                    <p>Arbeiter: <span>0 / 0</span></p>
+                </div>
+                <div class="buildable_actions">
+                    <div class="buildable_actions_upgrade">
+                        <button>Verbessern</button>
+                        <button>Effizienz steigern</button>
+                    </div>
+                    <div class="buildable_actions_upgrade">
+                        <button>Arbeiter zuweisen</button>
+                        <button>Arbeiter entfernen</button>
+                    </div>
+                </div>
+            </div>
             <div class="stats">
                 <p>Unterkünfte: <span id="habitats"></span></p>
                 <p>Mineralmine Level: <span id="mineralmine"></span></p>
@@ -80,8 +132,8 @@
             </div>
             <div class="buttons">
                 <button id="expedition_button">Expedition</button>
-                <button id="build_button" onclick="buildmenu('open')">Build</button>
-                <button id="settings_button">Settings</button>
+                <button id="build_button" onclick="buildmenu('open')">Bauen</button>
+                <button id="settings_button">Einstellungen</button>
             </div>
         </div>        
     </div>

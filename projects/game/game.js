@@ -31,7 +31,7 @@ function gameloop() {
     current_water += water_level;
     current_gold += gold_level;
 
-    if (Math.random() > 0.990) {
+    if (Math.random() > 0.995) {
         eventgeneration(); // Move this line inside the condition
     }
 
@@ -227,6 +227,38 @@ function buildmenu(action) {
     }
 }
 
+function buildable(action, which) {
+    let obj;
+
+    if (which == "mine"){
+        obj = document.getElementById("buildable_mine");
+        buildmenu('close');
+        }
+    if (which == "water"){
+        obj = document.getElementById("buildable_water")
+        buildmenu('close');
+    }
+    if (action == "open") {
+        obj.style.visibility = "visible";
+
+        document.getElementById("build_button").style.visibility = "hidden";
+        document.getElementById("expedition_button").style.visibility = "hidden";
+        document.getElementById("settings_button").style.visibility = "hidden";
+        pauseInterval();
+    }
+    else if (action == "close") {
+        obj.style.visibility = "hidden";
+        document.getElementById("build_button").style.visibility = "visible";
+        document.getElementById("expedition_button").style.visibility = "visible";
+        document.getElementById("settings_button").style.visibility = "visible";
+        update_hud();
+        resumeInterval();
+    }
+    else{
+        console.log("error in buildable function: Not a valid action");
+    }
+}
+
 function eventmenu(action){
     if (action == "open") {
         pauseInterval();
@@ -342,7 +374,6 @@ function eventhandler(event) {
         executeEffect(selectedEvent.options[0].effect);     
     }
 }
-
 
 async function executeEffect(effect) {
     switch (effect) {
